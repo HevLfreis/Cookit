@@ -1,0 +1,900 @@
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	back
+Gen.Back	go back
+Gen.Back	go back
+Gen.Back	go back
+Gen.Back	go back
+Gen.Back	go back
+Gen.Back	go back
+Gen.Back	上 一 个 对话 是 什么
+Gen.Back	上 一 个 界面
+Gen.Back	上 一 个 菜单
+Gen.Back	上 一 次 操作 你 返回一下
+Gen.Back	上 一 次 操作 啊
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步
+Gen.Back	上 一 步 不 知道 是 什么 情况 了
+Gen.Back	上 一 步 是 什么
+Gen.Back	上 一 界面
+Gen.Back	上 一 界面
+Gen.Back	上 一 界面
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级
+Gen.Back	上 一级 对话
+Gen.Back	上 一级 对话 界面
+Gen.Back	上 一级 对话 界面 我 想 看一下
+Gen.Back	上 一级 打开
+Gen.Back	上 一级 界面 还 没 看 完
+Gen.Back	上 一级 菜单
+Gen.Back	上 一级 菜单 呢
+Gen.Back	上 一级 页面
+Gen.Back	上 个 界面 事情 还 未 处理 完 我 需要 帮 我 退 回到 上 一 个 界面
+Gen.Back	上层
+Gen.Back	上级 界面
+Gen.Back	上级 界面
+Gen.Back	不对 是 上 一 条
+Gen.Back	不对 返 回去
+Gen.Back	不行 还 得 返 回去
+Gen.Back	亲 回转
+Gen.Back	亲 怎样 回到 上 一级 对话 界面
+Gen.Back	亲 能 往 前 一 个 页面 吗
+Gen.Back	亲 返回
+Gen.Back	你 不 退 回到 上 一级 对话 界面 我 就 不 让 你 往 下 走 啦
+Gen.Back	你 可以 选择 上 一 步
+Gen.Back	保持 并 返回 上 一 页
+Gen.Back	倒 回
+Gen.Back	倒 回
+Gen.Back	倒 回
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去
+Gen.Back	倒 回去一下
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退
+Gen.Back	倒退 一 下
+Gen.Back	倒退 一 步
+Gen.Back	倒退 些
+Gen.Back	倒退 回去
+Gen.Back	先 等 会 我们 先 回去 前 一 个 界面
+Gen.Back	关闭 当前 界面 进入 上 一 界面
+Gen.Back	关闭 这 个 对话 回到 刚才 那 个 对话
+Gen.Back	到 上 一级
+Gen.Back	到 上 一级
+Gen.Back	到 上 一级 对话 界面
+Gen.Back	到 上 个 界面
+Gen.Back	前面 一 个 菜单
+Gen.Back	去 上级
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退
+Gen.Back	后退 一 步
+Gen.Back	后退 一级
+Gen.Back	后退 亲
+Gen.Back	后退 到 上 一 步
+Gen.Back	后退 到 上级 界面
+Gen.Back	后退 后退
+Gen.Back	后退 至 上 一 界面
+Gen.Back	向 上
+Gen.Back	向 上
+Gen.Back	向 上
+Gen.Back	嘿 回到 刚才 的 步骤
+Gen.Back	回 上 一 个 对话
+Gen.Back	回 上 一级
+Gen.Back	回 上 一级
+Gen.Back	回 上 一级
+Gen.Back	回 上 一级 菜单
+Gen.Back	回 上 个 页面
+Gen.Back	回 上级
+Gen.Back	回 上级 界面
+Gen.Back	回 看 一下
+Gen.Back	回 退
+Gen.Back	回 退
+Gen.Back	回 退
+Gen.Back	回 退
+Gen.Back	回 退
+Gen.Back	回 退
+Gen.Back	回 退
+Gen.Back	回 首页
+Gen.Back	回到 上 一 条
+Gen.Back	回到 上 一 次 操作 界面
+Gen.Back	回到 上 一 步
+Gen.Back	回到 上 一 步
+Gen.Back	回到 上 一 界面 吧
+Gen.Back	回到 上 一层
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级
+Gen.Back	回到 上 一级 对话
+Gen.Back	回到 上 一级 对话 界面
+Gen.Back	回到 上 一级 对话 界面
+Gen.Back	回到 上 一级 对话 界面
+Gen.Back	回到 上 一级 对话 界面 好吗
+Gen.Back	回到 上 一级 菜单
+Gen.Back	回到 上 个 界面
+Gen.Back	回到 上 个 界面
+Gen.Back	回到 上层
+Gen.Back	回到 上级 界面
+Gen.Back	回到 主 界面
+Gen.Back	回到 之前 对话
+Gen.Back	回到 刚才 的 画面
+Gen.Back	回到 刚才 的 界面
+Gen.Back	回到 刚才 的 页面
+Gen.Back	回到 前 一 界面
+Gen.Back	回到 前面
+Gen.Back	回到 前面 再 想 想
+Gen.Back	回到 原来 界面
+Gen.Back	回到 原来 的 界面
+Gen.Back	回到 对话
+Gen.Back	回到 最初 的 界面
+Gen.Back	回到 系统 菜单
+Gen.Back	回到 起始
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去
+Gen.Back	回去 上 一级
+Gen.Back	回去 吧 还是 原来 的 好
+Gen.Back	好像 有 错误 走 哪 条 公路 到达 xx 才 最近 呢 请 退 回到 上 一级 对话 界面
+Gen.Back	如何 返回 上 一级 菜单
+Gen.Back	妈 蛋 上 一级 对话 界面
+Gen.Back	对 回 上 上 一级 对话 界面
+Gen.Back	对不起 哇 哦 忘记 前面 内 容 了 请 返回
+Gen.Back	小 伙伴 大家 都 在 上 一级 对话 界面 等 你 呢
+Gen.Back	帮 我 返回 上 一级
+Gen.Back	帮 我 返回 上 个 会话
+Gen.Back	帮忙 退回 上 一级 对话 界面
+Gen.Back	帮忙 退回 上 一级 对话 界面
+Gen.Back	帮忙 退回 上 一级 对话 界面
+Gen.Back	干嘛 不 继续 上 一级 的 对话
+Gen.Back	开 的 上边
+Gen.Back	往 回 退
+Gen.Back	快 倒退
+Gen.Back	快 点 回去 吧
+Gen.Back	快 退 回到 上 一级 对话 界面 吧 退出 现在 这 个 对话 界面
+Gen.Back	怎么 退 回去 呢
+Gen.Back	恢复 上 一 个 界面
+Gen.Back	想 返回
+Gen.Back	我 想 回到 上 一级 对话 界面
+Gen.Back	我 想 回到 上 一级 界面
+Gen.Back	我 想 回到 上 一级 界面
+Gen.Back	我 想 回到 前 一 个 界面
+Gen.Back	我 想 想 看看 上 一 个 界面
+Gen.Back	我 想 看 上级 对话
+Gen.Back	我 想 退 回到 上 一级 对话 界面 谢谢
+Gen.Back	我 想 退回 上 一 步
+Gen.Back	我 能 利用 系统 退 回到 上 一级 对话 界面 吗
+Gen.Back	我 要 回到 上 一 个 会话
+Gen.Back	我 要 回到 上 一级 界面
+Gen.Back	我 要 回到 上级 对话
+Gen.Back	我 要 回到 上面
+Gen.Back	我 要 返回 上 一 个 界面
+Gen.Back	我 要 返回 上 一级
+Gen.Back	我 要 返回 上 一级
+Gen.Back	我 要 进入 上级 菜单
+Gen.Back	我 要 退回
+Gen.Back	我 要 退回 上 一级
+Gen.Back	我 要 退回 原 界面
+Gen.Back	我 需要 后退 一 步
+Gen.Back	我 需要 退 回到 上 一级 对话 界面
+Gen.Back	我们 回到 上 一级 对话 界面 吧
+Gen.Back	打开 上 一 级 界面
+Gen.Back	打开 上 一级 对话 界面
+Gen.Back	打开 上 一级 对话 界面
+Gen.Back	打开 上 一级 对话 界面
+Gen.Back	打开 上 一级 界面
+Gen.Back	抱歉 有点 乱 请 先 退 回到 上 一级 对话 界面
+Gen.Back	按 退 后 键
+Gen.Back	是不是 不 一样 啊 返 回去
+Gen.Back	显示 上 一级 对话 界面
+Gen.Back	显示 上级 界面
+Gen.Back	显示 返回 内容
+Gen.Back	点 倒退 键
+Gen.Back	点 击 返回
+Gen.Back	点 击 返回 上 一级 菜单
+Gen.Back	看一下 上 一 步 的 内容
+Gen.Back	看看 上级 对话
+Gen.Back	系统 从 现在 这 个 对话 界面 退 回到 上 一级 对话 界面
+Gen.Back	结束 当前 对话 退回 上 一级 对话
+Gen.Back	给 我 倒 回去
+Gen.Back	给 我 退
+Gen.Back	给 我 退 回到 上 一级 对话 界面
+Gen.Back	继续 退回
+Gen.Back	要 退回 上级
+Gen.Back	要 退回 原来 的 对话 界面 吗
+Gen.Back	让 我 倒 回去 看看
+Gen.Back	让 我 回到 上 一级 界面
+Gen.Back	请 你 告诉 系统 退 回到 上 一级 对话 界面
+Gen.Back	请 再 显示一下 上 个 界面 的 内容
+Gen.Back	请 后退
+Gen.Back	请 向 上级 页面 返回
+Gen.Back	请 回 退
+Gen.Back	请 往 上 一 步
+Gen.Back	请 返回
+Gen.Back	请 返回
+Gen.Back	请 返回
+Gen.Back	请 返回
+Gen.Back	请 返回
+Gen.Back	请 返回 上 一 个 界面 重新 开始
+Gen.Back	请 返回 上 一 界面
+Gen.Back	请 返回 上 一级
+Gen.Back	请 返回 上 一级
+Gen.Back	请 返回 上 个 对话 界面
+Gen.Back	请 返回 上海 百货公司 页面
+Gen.Back	请 返回 上级 菜单
+Gen.Back	请 返回 到 上 一 界面
+Gen.Back	请 返回 到 上级 对话
+Gen.Back	请 返回 系统 界面
+Gen.Back	请 返回 菜单
+Gen.Back	请 返还 到 上 一层
+Gen.Back	请 退 到 前面 一 个 目录
+Gen.Back	请 退 回到 上 一级 对话 界面
+Gen.Back	请 退 回到 上 一级 对话 界面
+Gen.Back	请 退 回到 上 一级 对话 界面
+Gen.Back	请 退 回到 上 一级 界面
+Gen.Back	请 退 回到 之前 的 对话 界面
+Gen.Back	请 退 回去
+Gen.Back	请 退回 上 一 个
+Gen.Back	请 退回 上 一 个 界面
+Gen.Back	请 退回 上 一 步
+Gen.Back	请 退回 上 一 步
+Gen.Back	请 退回 上 一级
+Gen.Back	请 退回 上 一级 界面
+Gen.Back	请 退回 到 上 一 菜单
+Gen.Back	请回 到 上 一层 界面
+Gen.Back	请回 到 上 个 界面
+Gen.Back	请回 到 上级
+Gen.Back	请回 到 之前 的 对话 界面
+Gen.Back	请回 到 初始 界面 重新 开始
+Gen.Back	请返回
+Gen.Back	调 回去
+Gen.Back	调 回去 吧
+Gen.Back	跳 到 上 一级
+Gen.Back	跳 回去
+Gen.Back	跳 跳 返回
+Gen.Back	跳 转 到 上 一级 对话 界面
+Gen.Back	输入 有 误 请 返回
+Gen.Back	过 退
+Gen.Back	返 上
+Gen.Back	返 回去
+Gen.Back	返 回去
+Gen.Back	返 回去 检查一下
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回
+Gen.Back	返回 xx 界面
+Gen.Back	返回 一 次
+Gen.Back	返回 上 一 个
+Gen.Back	返回 上 一 次
+Gen.Back	返回 上 一 次 操作 吧
+Gen.Back	返回 上 一 步
+Gen.Back	返回 上 一 步
+Gen.Back	返回 上 一 步
+Gen.Back	返回 上 一 步
+Gen.Back	返回 上 一 步
+Gen.Back	返回 上 一 步
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 界面
+Gen.Back	返回 上 一 目录
+Gen.Back	返回 上 一 目录
+Gen.Back	返回 上 一 菜单
+Gen.Back	返回 上 一 菜单
+Gen.Back	返回 上 一 菜单
+Gen.Back	返回 上 一 菜单
+Gen.Back	返回 上 一 菜单
+Gen.Back	返回 上 一 菜单
+Gen.Back	返回 上 一 面
+Gen.Back	返回 上 一 页
+Gen.Back	返回 上 一处
+Gen.Back	返回 上 一处
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一层
+Gen.Back	返回 上 一届 面
+Gen.Back	返回 上 一步
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级
+Gen.Back	返回 上 一级 对话 框
+Gen.Back	返回 上 一级 对话 界面
+Gen.Back	返回 上 一级 对话 界面
+Gen.Back	返回 上 一级 对话 界面
+Gen.Back	返回 上 一级 对话 界面
+Gen.Back	返回 上 一级 对话 界面
+Gen.Back	返回 上 一级 对话 界面 吧
+Gen.Back	返回 上 一级 界面
+Gen.Back	返回 上 一级 界面
+Gen.Back	返回 上 一级 目录
+Gen.Back	返回 上 一级 菜单
+Gen.Back	返回 上 个 界面
+Gen.Back	返回 上 个 界面
+Gen.Back	返回 上 个 界面
+Gen.Back	返回 上层 菜单
+Gen.Back	返回 上次 操作
+Gen.Back	返回 上级
+Gen.Back	返回 上级
+Gen.Back	返回 上级
+Gen.Back	返回 上级
+Gen.Back	返回 上级
+Gen.Back	返回 上级 一 次
+Gen.Back	返回 上级 对话
+Gen.Back	返回 上级 对话
+Gen.Back	返回 上级 对话 界面
+Gen.Back	返回 上级 对话 界面
+Gen.Back	返回 上级 界面
+Gen.Back	返回 上级 界面
+Gen.Back	返回 上级 界面
+Gen.Back	返回 上级 界面
+Gen.Back	返回 上级 目录
+Gen.Back	返回 上级 菜单
+Gen.Back	返回 上级 菜单
+Gen.Back	返回 上级 菜单
+Gen.Back	返回 上级 菜单
+Gen.Back	返回 上级 菜单
+Gen.Back	返回 个 哇
+Gen.Back	返回 主 菜单
+Gen.Back	返回 主 菜单
+Gen.Back	返回 主页 面
+Gen.Back	返回 之前
+Gen.Back	返回 之前 的 页面
+Gen.Back	返回 到 上 一 个 界面
+Gen.Back	返回 到 上 一 界面
+Gen.Back	返回 到 上 一级
+Gen.Back	返回 到 上 一级
+Gen.Back	返回 到 上 一级
+Gen.Back	返回 到 上 一级 对话 界面
+Gen.Back	返回 到 上 一级 对话 界面
+Gen.Back	返回 到 上 一级 菜单
+Gen.Back	返回 到 上 个 界面
+Gen.Back	返回 前 页
+Gen.Back	返回 功能
+Gen.Back	返回 原 系统
+Gen.Back	返回 原来 的
+Gen.Back	返回 吧
+Gen.Back	返回 开始
+Gen.Back	返回 搜寻 页面
+Gen.Back	返回 搜索 引擎
+Gen.Back	返回 界面
+Gen.Back	返回 界面
+Gen.Back	返回 界面
+Gen.Back	返回 界面
+Gen.Back	返回 界面
+Gen.Back	返回 界面
+Gen.Back	返回 百度
+Gen.Back	返回 相应 界面
+Gen.Back	返回 相应 界面
+Gen.Back	返回 系统
+Gen.Back	返回 系统
+Gen.Back	返回 至 上 一级
+Gen.Back	返回 至 前 一 个 对话 界面
+Gen.Back	返回 菜单
+Gen.Back	返回 菜单
+Gen.Back	返回 菜单
+Gen.Back	返回 识别 界面
+Gen.Back	返回 过去
+Gen.Back	返回 返回
+Gen.Back	返回 重来
+Gen.Back	返回 键
+Gen.Back	返回 马上 的 哦
+Gen.Back	返还 键
+Gen.Back	还是 要 选择 上 一 步
+Gen.Back	这 个 能 退 回去 吗
+Gen.Back	这样 不对 返回
+Gen.Back	这里 出错 了 我 要 退 回去
+Gen.Back	进入 上 一 步
+Gen.Back	退 一 格
+Gen.Back	退 一 步
+Gen.Back	退 一 步
+Gen.Back	退 一 步
+Gen.Back	退 一 步
+Gen.Back	退 上 一 步
+Gen.Back	退 到 上 一 步 看看
+Gen.Back	退 到 上 一级 吧
+Gen.Back	退 到 上 一级 对话
+Gen.Back	退 到 上级 对话
+Gen.Back	退 后
+Gen.Back	退 后
+Gen.Back	退 后
+Gen.Back	退 回 到 上 一 步
+Gen.Back	退 回 到 窗口 并 刷新 吗
+Gen.Back	退 回到 上 一 个 去
+Gen.Back	退 回到 上 一 次 操作
+Gen.Back	退 回到 上 一 步
+Gen.Back	退 回到 上 一 步
+Gen.Back	退 回到 上 一 步
+Gen.Back	退 回到 上 一 页
+Gen.Back	退 回到 上 一级
+Gen.Back	退 回到 上 一级
+Gen.Back	退 回到 上 一级
+Gen.Back	退 回到 上 一级
+Gen.Back	退 回到 上 一级
+Gen.Back	退 回到 上 一级 对话
+Gen.Back	退 回到 上 一级 对话
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面
+Gen.Back	退 回到 上 一级 对话 界面 从 现在 这 个 对话 界面 回去
+Gen.Back	退 回到 上 一级 界面
+Gen.Back	退 回到 上 一级 界面
+Gen.Back	退 回到 上 一级 界面
+Gen.Back	退 回到 上 一级 界面
+Gen.Back	退 回到 刚才 界面
+Gen.Back	退 回到 对话 界面 吗
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去
+Gen.Back	退 回去 重新 来
+Gen.Back	退 回去一下
+Gen.Back	退 回转 上 一级
+Gen.Back	退 格
+Gen.Back	退 格
+Gen.Back	退 格
+Gen.Back	退一下
+Gen.Back	退出 并 返回 到 上 一级 对话 界面
+Gen.Back	退出 并 返回 到 上 一级 界面
+Gen.Back	退出 当前 一级
+Gen.Back	退出 当前 界面
+Gen.Back	退出 当前 界面 到 上 一 界面
+Gen.Back	退出 当前 界面 返回 上级
+Gen.Back	退出 现在 界面 返回 上 一级
+Gen.Back	退出 返回 上 一级
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回
+Gen.Back	退回 上 一 个
+Gen.Back	退回 上 一 个 界面
+Gen.Back	退回 上 一 条
+Gen.Back	退回 上 一 步
+Gen.Back	退回 上 一 步
+Gen.Back	退回 上 一 步
+Gen.Back	退回 上 一 界面
+Gen.Back	退回 上 一 页
+Gen.Back	退回 上 一 页
+Gen.Back	退回 上 一层
+Gen.Back	退回 上 一层 界面
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级
+Gen.Back	退回 上 一级 对话
+Gen.Back	退回 上 一级 对话 界面
+Gen.Back	退回 上 一级 对话 界面
+Gen.Back	退回 上 一级 对话 界面
+Gen.Back	退回 上 一级 对话 界面
+Gen.Back	退回 上 一级 对话 界面
+Gen.Back	退回 上 一级 界面
+Gen.Back	退回 上 一级 界面
+Gen.Back	退回 上 一级 界面
+Gen.Back	退回 上 一级 菜单
+Gen.Back	退回 上 一级 菜单
+Gen.Back	退回 上 一级 菜单
+Gen.Back	退回 上 一级 页面
+Gen.Back	退回 上 个 界面
+Gen.Back	退回 上层
+Gen.Back	退回 上级
+Gen.Back	退回 上级
+Gen.Back	退回 上级 对话 界面
+Gen.Back	退回 上级 对话 界面
+Gen.Back	退回 上级 对话 界面
+Gen.Back	退回 上级 界面
+Gen.Back	退回 上级 界面
+Gen.Back	退回 上级 菜单
+Gen.Back	退回 上级 菜单
+Gen.Back	退回 上级 菜单
+Gen.Back	退回 上级 菜单
+Gen.Back	退回 原来 的 位置
+Gen.Back	退回 原来 的 有点 麻烦 啊
+Gen.Back	选择 上 一 步
+Gen.Back	选择 上 一 步
+Gen.Back	选择 返回
+Gen.Back	通过 操作 返回
+Gen.Back	重回 界面
+Gen.Back	重复 上级 界面
+Gen.Back	重新 和 上 一 个 进行 对话
+Gen.Back	重新 回到 上 一级 对话 界面
+Gen.Back	马上 后退 快 点
+Gen.Back	马上 返回
+Gen.Back	马上 返回 的 哦
+Gen.Back	马上 退回 上 一 个

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <title>Cookit | Data Select</title>
@@ -40,6 +40,55 @@
               </ul>
             </div>
           </div>
+
+          <div class="col-lg-8">
+            <div class="well bs-component">
+              <form class="form-horizontal">
+                <fieldset>
+
+                  <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Domain</label>
+                    <div class="col-lg-10">
+                      <select id="domain" multiple="" class="form-control" style="height: 200px">
+                        {% for domain in domains %}
+                          <option>{{ domain }}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+
+
+
+                  </div>
+                  <div class="form-group">
+                    <label for="select" class="col-lg-2 control-label">Topic</label>
+                    <div id="{{ domain }}" class="topic col-lg-10">
+                      <select multiple=""  class="form-control" style="height: 200px">
+                      </select>
+                    </div>
+                    {% for domain, tops in topics.items %}
+                      <div id="{{ domain }}" class="topic col-lg-10" hidden>
+                        <select id="form-{{ domain }}" multiple=""  class="form-control" style="height: 200px">
+                          {% for topic in tops %}
+                            <option>{{ topic }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="form-group">
+
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <textarea class="form-control" rows="5" id="submit-text"></textarea>
+                      </br>
+                      <button id="download" type="button" class="btn btn-info">Download Data</button>
+                      <button type="submit" class="btn btn-primary">Next</button>
+
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+          </div>
         </div>
       </div>
     </div>
@@ -48,5 +97,44 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/bootstrap/js/custom.js"></script>
+    <script type="text/javascript">
+      $('#domain').change(function(){
+
+       $('.topic').hide();
+       console.log($(this).val());
+       var domain = $(this).val();
+       $('#'+$(this).children('option:selected').val()).show().children().dblclick(function(){
+         console.log($(this).val());
+         $('#submit-text').val($('#submit-text').val()+domain+'.'+$(this).val()+';');
+       });
+      }).children().dblclick(function(){
+       var domain = $(this).val();
+       console.log(domain);
+       $.each($('#form-'+$(this).val()).children(), function(){
+         $('#submit-text').val($('#submit-text').val()+domain+'.'+$(this).val()+';');
+       });
+      });
+
+
+      $('#download').click(function(){
+
+        $.ajax({
+          url: {% url 'downcorpus' %},
+          timeout: 50000,
+          type: 'post',
+          data: {topics:$('#submit-text').val()},
+          success: function (result) {
+            window.location.href='/static/temp/'+result+'.zip'
+            $('#submit-text').val('');
+
+          }
+        });
+      })
+
+
+
+
+
+    </script>
   </body>
 </html>
