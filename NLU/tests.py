@@ -11,7 +11,7 @@ def event_func(msg):
 
 if __name__ == "__main__":
 
-    s = sched.scheduler(time.time,time.sleep)
+    s = sched.scheduler(time.time, time.sleep)
 
     s.enter(8, 2,event_func,("Small event.",))
     s.enter(2,1,event_func,("Big event.",))

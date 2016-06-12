@@ -8,7 +8,9 @@ import StringIO
 import codecs
 import os
 import datetime
+import sched
 import zipfile
+import time
 import thread
 from NLU.constants import NLU_TOPIC, STATIC_FOLDER
 from NLU.models import Corpus
@@ -36,25 +38,52 @@ def get_corpus_file(topics, sessionid):
     filepath = os.path.join(STATIC_FOLDER, 'temp\\' + filename)
     print filepath
 
-    # thread.start_new_thread(create_file, (topics, filepath))
-    create_file(topics, filepath)
-    return filename
+    topic_failed = create_temp_file(topics, filepath)
+    thread.start_new_thread(do_clean_up_sched, (filepath,))
+    return {'filename': filename, 'errors': topic_failed}
 
 
-def create_file(topics, filepath):
+def create_temp_file(topics, filepath):
+
     txt = codecs.open(filepath+'.txt', 'w+', 'utf-8')
+
+    topic_failed = []
     #
     for topic in topics:
-        cps = Corpus.objects.filter(topic=topic)
-        for cp in cps:
-            # print cp.topic+'\t'+cp.content
-            txt.write(cp.topic+'\t'+cp.content+'\n')
+        if Corpus.objects.filter(topic=topic).exists():
+            cps = Corpus.objects.filter(topic=topic)
+            for cp in cps:
+                # print cp.topic+'\t'+cp.content
+                txt.write(cp.topic+'\t'+cp.content+'\n')
+        else:
+            topic_failed.append(topic)
+
 
     txt.close()
 
     f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
     f.write(filepath+'.txt')
     f.close()
+
+    return topic_failed
+
+
+def do_clean_up_sched(filepath):
+    s = sched.scheduler(time.time, time.sleep)
+    s.enter(120, 1, do_clean_up, (filepath,))
+    s.run()
+
+
+def do_clean_up(filepath):
+
+    try:
+        os.remove(filepath+'.txt')
+        os.remove(filepath+'.zip')
+
+        print 'Clean up:', filepath
+    except Exception, e:
+        print e
+
 
 
 

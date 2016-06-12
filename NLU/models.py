@@ -10,4 +10,3 @@ class Corpus(models.Model):
     content = models.CharField(max_length=200)
     md5 = models.CharField(max_length=50)
     last_modified = models.DateTimeField()
-    last_modified_backup = models.CharField(max_length=200)
