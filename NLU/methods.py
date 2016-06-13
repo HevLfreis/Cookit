@@ -50,8 +50,8 @@ def create_temp_file(topics, filepath):
     topic_failed = []
     #
     for topic in topics:
-        if Corpus.objects.filter(topic=topic).exists():
-            cps = Corpus.objects.filter(topic=topic)
+        if Corpus.objects.filter(topic__exact=topic).exists():
+            cps = Corpus.objects.filter(topic__exact=topic)
             for cp in cps:
                 # print cp.topic+'\t'+cp.content
                 txt.write(cp.topic+'\t'+cp.content+'\n')

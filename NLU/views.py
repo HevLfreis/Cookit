@@ -2,7 +2,6 @@ import json
 import random
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.core.servers.basehttp import FileWrapper
 
 # Create your views here.
 from NLU.constants import NLU_TOPIC
