@@ -9,12 +9,13 @@ import codecs
 import os
 import datetime
 import sched
+import shutil
 import zipfile
 import time
 import thread
-from NLU.constants import NLU_TOPIC, STATIC_FOLDER
+from NLU.constants import NLU_TOPIC, STATIC_FOLDER, TEMP_PATH
 from NLU.models import Corpus
-
+from os.path import basename
 
 def init():
     cs = Corpus.objects.all()
@@ -26,6 +27,13 @@ def init():
         elif topic not in NLU_TOPIC[domain]:
             NLU_TOPIC[domain].append(topic)
 
+    if not os.path.exists(TEMP_PATH):
+        os.makedirs(TEMP_PATH)
+
+    else:
+        shutil.rmtree(TEMP_PATH)
+        os.makedirs(TEMP_PATH)
+
 
 def get_corpus_file(topics, sessionid):
 
@@ -35,37 +43,37 @@ def get_corpus_file(topics, sessionid):
 
     now = datetime.datetime.now()
     filename = str(sessionid)+'_'+now.strftime('%Y-%m-%d_%H-%M-%S')
-    filepath = os.path.join(STATIC_FOLDER, 'temp\\' + filename)
+    filepath = os.path.join(TEMP_PATH, filename)
     print filepath
 
-    topic_failed = create_temp_file(topics, filepath)
+    rtopics = create_temp_file(topics, filepath)
     thread.start_new_thread(do_clean_up_sched, (filepath,))
-    return {'filename': filename, 'errors': topic_failed}
+    return {'filename': filename, 'topics': rtopics}
 
 
 def create_temp_file(topics, filepath):
 
     txt = codecs.open(filepath+'.txt', 'w+', 'utf-8')
 
-    topic_failed = []
+    topic_success, topic_failed = [], []
     #
     for topic in topics:
         if Corpus.objects.filter(topic__exact=topic).exists():
+            topic_success.append(topic.strip().split('.', 1))
             cps = Corpus.objects.filter(topic__exact=topic)
             for cp in cps:
                 # print cp.topic+'\t'+cp.content
                 txt.write(cp.topic+'\t'+cp.content+'\n')
         else:
-            topic_failed.append(topic)
-
+            topic_failed.append(topic.strip().split('.', 1))
 
     txt.close()
 
     f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
-    f.write(filepath+'.txt')
+    f.write(filepath+'.txt', basename(filepath+'.txt'))
     f.close()
 
-    return topic_failed
+    return {'success': topic_success, 'errors': topic_failed}
 
 
 def do_clean_up_sched(filepath):

@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
-    <title>Cookit | Data Select</title>
+    <title>Cookit | Corpus Select</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" media="screen">
@@ -13,18 +13,24 @@
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
       <script src="../bower_components/respond/dest/respond.min.js"></script>
     <![endif]-->
-    <script>
 
+    <style>
+      td {
+        width: 50%;
+      }
+    </style>
 
-    </script>
   </head>
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="../" class="navbar-brand">NLU Cookit </a>
+          <a href="../" class="navbar-brand">Cookit </a>
 
         </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">ENLU PROJ</a></li>
+        </ul>
 
       </div>
     </div>
@@ -35,7 +41,8 @@
 
             <div class="bs-component">
               <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#">Data Select</a></li>
+                <li class="active"><a href="#">Corpus Select</a></li>
+                <li><a href="#">More Spices</a></li>
                 <li><a href="#">Model Select</a></li>
                 <li><a href="#">Train</a></li>
                 <li><a href="#">Results</a></li>
@@ -77,49 +84,22 @@
                       </div>
                     {% endfor %}
                   </div>
-                  <div class="form-group">
+
+                  <div id="form-last" class="form-group">
                     <label for="table" class="col-lg-2 control-label">Selected Topics</label>
-                    <div class="col-lg-10">
+                    <div class="col-lg-10" style="padding-bottom: 40px">
                       <textarea class="form-control" rows="5" id="submit-text"></textarea>
                       </br>
                       <button id="download" type="button" class="btn btn-info">Download Data</button>
                       <button type="submit" class="btn btn-primary">Next</button>
 
                     </div>
-                    <label for="table" class="col-lg-2 control-label">Download Result</label>
-                    <div class="col-lg-10">
-                      <table class="table table-striped table-hover ">
-                        <thead>
-                        <tr>
-                          <th>Domain</th>
-                          <th>Topic</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                          <td>Column content</td>
-                          <td>Column content</td>
-                        </tr>
-                        <tr>
-                          <td>Column content</td>
-                          <td>Column content</td>
-                        </tr>
-                        <tr>
-                          <td>Column content</td>
-                          <td>Column content</td>
-                        </tr>
-                        <tr>
-                          <td>Column content</td>
-                          <td>Column content</td>
-                        </tr>
-                        </tbody>
-                      </table>
-                    </div>
+
                   </div>
 
                 </fieldset>
               </form>
-
+            </div>
           </div>
         </div>
       </div>
@@ -133,15 +113,14 @@
       $('#domain').change(function(){
 
        $('.topic').hide();
-       console.log($(this).val());
+
        var domain = $(this).val();
        $('#'+$(this).children('option:selected').val()).show().children().dblclick(function(){
-         console.log($(this).val());
          $('#submit-text').val($('#submit-text').val()+domain+'.'+$(this).val()+';');
        });
       }).children().dblclick(function(){
        var domain = $(this).val();
-       console.log(domain);
+
        $.each($('#form-'+$(this).val()).children(), function(){
          $('#submit-text').val($('#submit-text').val()+domain+'.'+$(this).val()+';');
        });
@@ -149,6 +128,13 @@
 
 
       $('#download').click(function(){
+        var dl_btn = $(this);
+        if(!$('#submit-text').val()) {
+          alert('Please select at least one topic ! ');
+          return
+        }
+
+        dl_btn.addClass('disabled');
 
         $.ajax({
           url: {% url 'downcorpus' %},
@@ -156,19 +142,16 @@
           type: 'post',
           data: {topics:$('#submit-text').val()},
           success: function (result) {
-            var filename = JSON.parse(result).filename;
-            var errors = JSON.parse(result).errors;
-            console.log(errors);
+            dl_btn.removeClass('disabled');
+            var filename = result.filename;
+            $('#form-last').append(result.html);
+
             window.location.href='/static/temp/'+filename+'.zip';
             $('#submit-text').val('');
 
           }
         });
       })
-
-
-
-
 
     </script>
   </body>

@@ -1,4 +1,4 @@
 # Cookit
-nlu
+nlu project
 
 waiting...
