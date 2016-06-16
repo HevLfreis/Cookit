@@ -55,15 +55,16 @@ def create_temp_file(topics, filepath):
 
     txt = codecs.open(filepath+'.txt', 'w+', 'utf-8')
 
-    topic_success, topic_failed = [], []
+    topic_success, topic_failed, top_dict = [], [], {}
     #
     for topic in topics:
-        if Corpus.objects.filter(topic__exact=topic).exists():
+        if Corpus.objects.filter(topic__exact=topic).exists() and topic not in top_dict:
+            top_dict[topic] = 1
             topic_success.append(topic.strip().split('.', 1))
             cps = Corpus.objects.filter(topic__exact=topic)
             for cp in cps:
                 # print cp.topic+'\t'+cp.content
-                txt.write(cp.topic+'\t'+cp.content+'\n')
+                txt.write(cp.topic+'    '+cp.content+'\n')
         else:
             topic_failed.append(topic.strip().split('.', 1))
 

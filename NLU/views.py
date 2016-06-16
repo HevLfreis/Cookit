@@ -14,7 +14,11 @@ init()
 # print NLU_TOPIC
 
 
-def index(request):
+def home(request):
+    return render(request, 'NLU/home.html')
+
+
+def data(request):
 
     domains = sorted(NLU_TOPIC.keys())
     return render(request, 'NLU/data.html', {'domains': domains, 'topics': NLU_TOPIC})
