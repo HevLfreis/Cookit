@@ -18,6 +18,10 @@ def home(request):
     return render(request, 'NLU/home.html')
 
 
+def cook_login(request):
+    return render(request, 'NLU/login.html')
+
+
 def data(request):
 
     domains = sorted(NLU_TOPIC.keys())

@@ -5,7 +5,7 @@
     <title>Cookit | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" media="screen">
     <link rel="stylesheet" href="/static/bootstrap/css/custom.min.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -21,15 +21,57 @@
         padding: 200px 250px 0 250px;
         height: calc(100vh - 60px);
         margin: 0;
+        background-color: #1a242f;
+      }
+
+      .jumbotron h1,
+      .jumbotron h4,
+      .jumbotron .h1 {
+        color: mintcream;
       }
 
     </style>
   </head>
   <body>
+    <div class="modal fade" id="login-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Login to start cooking</h4>
+          </div>
+          <div class="modal-body well" style="margin: 0">
+
+              <form class="form-horizontal">
+                <fieldset>
+                  <div class="form-group">
+                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                    <div class="col-lg-10">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                    <div class="col-lg-10">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2">
+                      <button type="submit" class="btn btn-primary pull-right">Login</button>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand">Cookit</a>
+          <a href={% url 'home' %} class="navbar-brand">Cookit</a>
         </div>
              <ul class="nav navbar-nav navbar-right">
             <li><a href="#">NLU ONLINE PROJ</a></li>
@@ -40,7 +82,7 @@
     <div class="jumbotron text-center">
       <h1>Cookit</h1>
       <h4>NLU ONlINE PROJECT</h4>
-      <p style="padding-top: 50px"><a class="btn btn-primary btn-lg">Start Cooking</a></p>
+      <p style="padding-top: 50px"><a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-info btn-lg">Start Cooking</a></p>
     </div>
 
 
