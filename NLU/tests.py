@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+import getpass
 import os
 import random
 import re
@@ -24,6 +25,7 @@ import sys
 #     s.enter(2,1,event_func,("Big event.",))
 #     s.run()
 from os.path import dirname, abspath
+
 
 def corpus_list(pattern):
     segments = map(lambda x: x.lstrip('(').split('|') if x.startswith('(') else ['']+x.lstrip('[').split('|'),
@@ -61,18 +63,7 @@ if __name__ == '__main__':
 
     # f = open('ts.txt', 'w')
     # f.write('a'+'\t'+'b')
-    PROJECT_DIR = dirname(dirname(abspath(__file__)))
-    sys.path.append(PROJECT_DIR)
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Cookit.settings")
-
-    from django.core.wsgi import get_wsgi_application
-    application = get_wsgi_application()
-
-    from django.contrib.auth.models import User
-    #
-    user = User.objects.create_user(username='test',
-                                    email='test@123.com',
-                                    password='123456')
+    print 'Hi'
 
 
 

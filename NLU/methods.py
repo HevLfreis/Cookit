@@ -17,6 +17,7 @@ from NLU.constants import NLU_TOPIC, STATIC_FOLDER, TEMP_PATH
 from NLU.models import Corpus
 from os.path import basename
 
+
 def init():
     cs = Corpus.objects.all()
     for c in cs:

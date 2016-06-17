@@ -8,6 +8,7 @@ import os
 
 from Cookit.settings import STATICFILES_DIRS
 
+PROJECT_NAME = 'COOKIT'
 NLU_TOPIC = {}
 STATIC_FOLDER = STATICFILES_DIRS[0]
 
