@@ -21,8 +21,10 @@ urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^$', views.redirect2main, name='redirect'),
     url(r'^home/$', views.home, name='home'),
+    url(r'^checklogin/$', views.check_login, name='checkLogin'),
+
     url(r'^corpus/$', views.corpus, name='corpus'),
-    url(r'^downcorpus/$', views.downcorpus, name='downcorpus'),
+    url(r'^downcorpus/$', views.downcorpus, name='downCorpus'),
     url(r'^hrl/$', views.hrl, name='hrl'),
-    url(r'^downhrl/$', views.downhrl, name='downhrl'),
+    url(r'^downhrl/$', views.downhrl, name='downHrl'),
 ]

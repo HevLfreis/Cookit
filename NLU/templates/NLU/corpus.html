@@ -153,7 +153,7 @@
         dl_btn.addClass('disabled');
 
         $.ajax({
-          url: {% url 'downcorpus' %},
+          url: {% url 'downCorpus' %},
           timeout: 50000,
           type: 'post',
           data: {topics:$('#submit-text').val()},

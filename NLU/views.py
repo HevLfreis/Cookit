@@ -22,6 +22,7 @@ def redirect2main(request):
 
 def home(request):
     if request.is_ajax():
+
         username = request.POST.get('username')
         password = request.POST.get('password')
         user = authenticate(username=username, password=password)
@@ -37,6 +38,10 @@ def home(request):
             return HttpResponse(-1)
     else:
         return render(request, 'NLU/home.html', {'project_name': PROJECT_NAME})
+
+
+def check_login(request):
+    return HttpResponse(request.user.is_authenticated())
 
 
 @login_required

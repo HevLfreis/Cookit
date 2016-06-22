@@ -83,7 +83,7 @@
     <div class="jumbotron text-center">
       <h1>{{ project_name }}</h1>
       <h4>NLU online project</h4>
-      <p style="padding-top: 50px"><a href="#" data-toggle="modal" data-target="#login-modal" class="btn btn-info btn-lg">Start Cooking</a></p>
+      <p style="padding-top: 50px"><a href="#" id="start-cooking" class="btn btn-info btn-lg">Start Cooking</a></p>
     </div>
 
 
@@ -91,6 +91,13 @@
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/bootstrap/js/custom.js"></script>
     <script type="text/javascript">
+      $('#start-cooking').click(function(){
+        $.get("{% url 'checkLogin' %}", function(result){
+          if (result) window.location.href='{% url 'corpus' %}';
+          else $('#login-modal').modal('show');
+        });
+
+      });
       $('#login').click(function(){
         $.post("{% url 'home' %}", $('form').serialize(), function(result){
           if(result == 1) window.location.href='{% url 'corpus' %}';
