@@ -19,7 +19,7 @@
 
       .jumbotron {
         padding: 200px 250px 0 250px;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 50px);
         margin: 0;
         background-color: #1a242f;
       }
@@ -93,7 +93,7 @@
     <script type="text/javascript">
       $('#login').click(function(){
         $.post("{% url 'home' %}", $('form').serialize(), function(result){
-          if(result == 1) window.location.href='{% url 'data' %}';
+          if(result == 1) window.location.href='{% url 'corpus' %}';
           else {
             $('#p-failed').show();
             $('.form-group').addClass('has-error');

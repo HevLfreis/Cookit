@@ -1,21 +1,23 @@
-import json
 import random
 
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.template.loader import get_template
 
-from NLU.constants import NLU_TOPIC, PROJECT_NAME
-from NLU.methods import init, get_corpus_file
+from NLU.constants import NLU_CORPUS_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC
+from NLU.methods import init, create_zipfile
 
 init()
 
-# print NLU_TOPIC
+# print NLU_HRL_TOPIC
+
+
+def redirect2main(request):
+    return redirect('home')
 
 
 def home(request):
@@ -27,6 +29,7 @@ def home(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
+                request.session['id'] = random.randint(10000, 99999)
                 return HttpResponse(1)
             else:
                 return HttpResponse(-1)
@@ -37,21 +40,43 @@ def home(request):
 
 
 @login_required
-def data(request):
+def corpus(request):
 
-    domains = sorted(NLU_TOPIC.keys())
-    return render(request, 'NLU/data.html', {'domains': domains, 'topics': NLU_TOPIC, 'project_name': PROJECT_NAME})
+    domains = sorted(NLU_CORPUS_TOPIC.keys())
+    return render(request, 'NLU/corpus.html', {'domains': domains, 'topics': NLU_CORPUS_TOPIC, 'project_name': PROJECT_NAME})
 
 
 @login_required
 def downcorpus(request):
     if request.is_ajax():
 
-        # request.session['id'] = random.randint(10000, 99999)
         try:
             topics = request.POST.get('topics')
 
-            res = get_corpus_file(topics, random.randint(10000, 99999))
+            res = create_zipfile(topics, request.session.get('id'), 'corpus')
+        except Exception, e:
+            print e
+            res = None
+
+        t = get_template('NLU/dl_res.html')
+        html = t.render(res['topics'])
+        return JsonResponse({'filename': res['filename'], 'html': html}, safe=False)
+
+
+@login_required
+def hrl(request):
+    domains = sorted(NLU_HRL_TOPIC.keys())
+    return render(request, 'NLU/hrl.html', {'domains': domains, 'topics': NLU_HRL_TOPIC, 'project_name': PROJECT_NAME})
+
+
+@login_required
+def downhrl(request):
+    if request.is_ajax():
+
+        try:
+            topics = request.POST.get('topics')
+
+            res = create_zipfile(topics, request.session.get('id'), 'hrl')
         except Exception, e:
             print e
             res = None
@@ -59,9 +84,7 @@ def downcorpus(request):
         # for line in corpus_file:
         #     print line
 
-        # response = HttpResponse(FileWrapper(corpus_file.getvalue()), content_type='application/zip')
-        # response['Content-Disposition'] = 'attachment; filename=myfile.zip'
-        # return HttpResponse(json.dumps(res))
-        t = get_template('NLU/data_res.html')
+        t = get_template('NLU/dl_res.html')
         html = t.render(res['topics'])
         return JsonResponse({'filename': res['filename'], 'html': html}, safe=False)
+

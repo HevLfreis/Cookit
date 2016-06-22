@@ -4,29 +4,35 @@
 # Date: 2016/6/10 
 # Time: 18:21
 #
-import StringIO
 import codecs
-import os
 import datetime
+import os
 import sched
 import shutil
-import zipfile
-import time
 import thread
-from NLU.constants import NLU_TOPIC, STATIC_FOLDER, TEMP_PATH
-from NLU.models import Corpus
+import time
+import zipfile
 from os.path import basename
+
+from NLU.constants import NLU_CORPUS_TOPIC, TEMP_PATH, NLU_HRL_TOPIC
+from NLU.models import Corpus, Hrl
 
 
 def init():
-    cs = Corpus.objects.all()
-    for c in cs:
+    for c in Corpus.objects.all():
         domain, topic = c.topic.split('.', 1)
 
-        if domain not in NLU_TOPIC:
-            NLU_TOPIC[domain] = [topic, ]
-        elif topic not in NLU_TOPIC[domain]:
-            NLU_TOPIC[domain].append(topic)
+        if domain not in NLU_CORPUS_TOPIC:
+            NLU_CORPUS_TOPIC[domain] = [topic, ]
+        elif topic not in NLU_CORPUS_TOPIC[domain]:
+            NLU_CORPUS_TOPIC[domain].append(topic)
+
+    for hrl in Hrl.objects.all():
+        domain, topic = hrl.topic.split('_')[1:3]
+        if domain not in NLU_HRL_TOPIC:
+            NLU_HRL_TOPIC[domain] = [topic, ]
+        elif topic not in NLU_HRL_TOPIC[domain]:
+            NLU_HRL_TOPIC[domain].append(topic)
 
     if not os.path.exists(TEMP_PATH):
         os.makedirs(TEMP_PATH)
@@ -36,7 +42,7 @@ def init():
         os.makedirs(TEMP_PATH)
 
 
-def get_corpus_file(topics, sessionid):
+def create_zipfile(topics, sessionid, context='corpus'):
 
     topics = topics.strip().rstrip(';').split(';')
 
@@ -47,12 +53,18 @@ def get_corpus_file(topics, sessionid):
     filepath = os.path.join(TEMP_PATH, filename)
     print filepath
 
-    rtopics = create_temp_file(topics, filepath)
+    if context == 'corpus':
+        rtopics = create_corpus_file(topics, filepath)
+    elif context == 'hrl':
+        rtopics = create_hrl_file(topics, filepath)
+
+    print rtopics, 'r'
+
     thread.start_new_thread(do_clean_up_sched, (filepath,))
     return {'filename': filename, 'topics': rtopics}
 
 
-def create_temp_file(topics, filepath):
+def create_corpus_file(topics, filepath):
 
     txt = codecs.open(filepath+'.txt', 'w+', 'utf-8')
 
@@ -71,11 +83,48 @@ def create_temp_file(topics, filepath):
 
     txt.close()
 
-    f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
-    f.write(filepath+'.txt', basename(filepath+'.txt'))
-    f.close()
+    zip_file(filepath, '.txt')
 
     return {'success': topic_success, 'errors': topic_failed}
+
+
+def create_hrl_file(topics, filepath):
+
+    txt = codecs.open(filepath+'.hrl', 'w+', 'utf-8')
+
+    topic_success, topic_failed, top_dict = [], [], {}
+
+    hrl_head = '#head;hrl;2.0;utf-8\n' \
+               '#ref#speechfile#speaker#gender#reference word sequence#topic#;slot names#;slot values\n' \
+               'head\n'
+
+    txt.write(hrl_head)
+
+    for topic in topics:
+        if Hrl.objects.filter(topic__contains=topic).exists() and topic not in top_dict:
+            top_dict[topic] = 1
+            topic_success.append(topic.strip().split('_', 1))
+            hrls = Hrl.objects.filter(topic__contains=topic)
+            for hrl in hrls:
+                # print cp.topic+'\t'+cp.content
+                gender = 'female' if hrl.gender else 'male'
+                txt.write('ref#'+hrl.speech_file+'#'+hrl.speaker+'#'+gender+'#'+hrl.reference_word_sequence+
+                          '#'+hrl.topic+'#'+hrl.slot_names+'#'+hrl.slot_values+'\n')
+        else:
+            topic_failed.append(topic.strip().split('_', 1))
+
+    txt.close()
+
+    zip_file(filepath, '.hrl')
+
+    return {'success': topic_success, 'errors': topic_failed}
+
+
+def zip_file(filepath, suffix):
+    f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
+
+    f.write(filepath+suffix, basename(filepath+suffix))
+    f.close()
 
 
 def do_clean_up_sched(filepath):
