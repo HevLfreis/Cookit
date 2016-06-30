@@ -59,11 +59,11 @@ if __name__ == '__main__':
     # generate_corpus('pattern.txt', 'pa.txt')
 
     # print map(lambda x: x.lstrip('(').split('|') if x.startswith('(') else ['']+x.lstrip('[').split('|'), re.split('[\])]', "[a|b][c|d](e|f)".replace(' ', ''))[:-1])
-    # print corpus_list("[a|b][c|d](e|f)")
+    print corpus_list("[a][c|r](e)")
 
     # f = open('ts.txt', 'w')
     # f.write('a'+'\t'+'b')
-    print 'Hi'
+    # print 'Hi'
 
 
 

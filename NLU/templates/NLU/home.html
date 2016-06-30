@@ -93,7 +93,8 @@
     <script type="text/javascript">
       $('#start-cooking').click(function(){
         $.get("{% url 'checkLogin' %}", function(result){
-          if (result) window.location.href='{% url 'corpus' %}';
+
+          if (result == 'True') window.location.href='{% url 'corpus' %}';
           else $('#login-modal').modal('show');
         });
 

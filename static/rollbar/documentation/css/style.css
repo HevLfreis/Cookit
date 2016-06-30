@@ -1,0 +1,45 @@
+/* browser reset */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+/* typography */
+body,html{ width: 100%; height: 100%; }
+body { font: 14px/22px "Arial", sans-serif; color: #999; }
+h1,h2,h3,h4 { color: #666; font-weight: bold; padding-top: 22px;}
+h1 { font-size: 28px; line-height: 30px; }
+h2 { font-size: 22px; }
+h3 { font-size: 18px; }
+h1,h2,h3,p,ul,ol,code { margin: 0 0 22px; }
+img { border: 0; vertical-align: middle; }
+small { font-size: 11px; }
+em { font-style: italic; font-weight: bold; }
+ul { list-style: inside square; }
+ol { list-style-position: inside; }
+hr { margin: 22px 0; height: 1px; border:0; width: 100%; background-color: #eee; }
+a {  color: #444; text-decoration: none; }
+a:hover {color: #999; }
+code { display: block; white-space: pre-wrap; font-size: 12px; margin-top: 22px;
+color: #777; border: 1px solid #eee; padding: 5px; }
+
+/* classes */
+body > .rollbar-content { width: 760px; left: 0; right: 0; margin: 0 auto; float: none!important; }
+.center-wrapper { padding: 0 60px; border-left: 1px solid #eee; border-right: 1px solid #eee; }
+.header { padding: 0 0 22px; }
+.header h1 { margin-bottom: 44px; }
+.contents { position: fixed; left: 2em; top: 4px; }
+.contents ol { font-weight: bold; color: #666; border-bottom: 1px solid #EEE; padding-bottom: 22px; padding-left: 1em; }
+.contents ol a { color: inherit;  }
+.footer { font-size: 11px; border-top: 1px solid #eee; margin-top: 44px; padding: 10px 0; overflow: hidden; }
+.footer ul { float: left; list-style: inside none; position: relative; left: 50%; }
+.footer ul li { position: relative; left: -50%; float: left; padding-right: 10px; margin-right: 10px; border-right: 1px solid #eee; }
+.footer ul li:last-child { border-right: 0; }
+
+
+
