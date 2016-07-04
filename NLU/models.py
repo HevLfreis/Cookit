@@ -12,6 +12,13 @@ class Corpus(models.Model):
     last_modified = models.DateTimeField()
 
 
+class Pattern(models.Model):
+    topic = models.CharField(max_length=50)
+    content = models.CharField(max_length=200)
+    md5 = models.CharField(max_length=50)
+    last_modified = models.DateTimeField()
+
+
 class Hrl(models.Model):
     speech_file = models.CharField(max_length=100)
     speaker = models.CharField(max_length=50)

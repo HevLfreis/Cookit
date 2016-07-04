@@ -8,12 +8,12 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.template.loader import get_template
 
-from NLU.constants import NLU_CORPUS_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC
+from NLU.constants import NLU_COP_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC, NLU_PAT_TOPIC
 from NLU.methods import init, create_zipfile
 
 init()
 
-# print NLU_HRL_TOPIC
+# print NLU_PAT_TOPIC
 
 
 def redirect2main(request):
@@ -45,20 +45,36 @@ def check_login(request):
 
 
 @login_required
-def corpus(request):
+def download(request):
 
-    domains = sorted(NLU_CORPUS_TOPIC.keys())
-    return render(request, 'NLU/corpus.html', {'domains': domains, 'topics': NLU_CORPUS_TOPIC, 'project_name': PROJECT_NAME})
+    c_domains = sorted(NLU_COP_TOPIC.keys())
+    h_domains = sorted(NLU_HRL_TOPIC.keys())
+    p_domains = sorted(NLU_PAT_TOPIC.keys())
+    return render(request, 'NLU/download.html',
+                  {'c_domains': c_domains, 'c_topics': NLU_COP_TOPIC,
+                   'h_domains': h_domains, 'h_topics': NLU_HRL_TOPIC,
+                   'p_domains': p_domains, 'p_topics': NLU_PAT_TOPIC, 'project_name': PROJECT_NAME})
 
 
 @login_required
-def downcorpus(request):
+def get_data(request):
     if request.is_ajax():
 
         try:
             topics = request.POST.get('topics')
+            t = request.POST.get('t')
 
-            res = create_zipfile(topics, request.session.get('id'), 'corpus')
+            print t
+
+            if 'cop' in t:
+                res = create_zipfile(topics, request.session.get('id'), 'cop')
+            elif 'hrl' in t:
+                res = create_zipfile(topics, request.session.get('id'), 'hrl')
+            elif 'pat' in t:
+                res = create_zipfile(topics, request.session.get('id'), 'pat')
+            else:
+                res = None
+
         except Exception, e:
             print e
             res = None

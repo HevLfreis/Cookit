@@ -94,14 +94,14 @@
       $('#start-cooking').click(function(){
         $.get("{% url 'checkLogin' %}", function(result){
 
-          if (result == 'True') window.location.href='{% url 'corpus' %}';
+          if (result == 'True') window.location.href='{% url 'download' %}';
           else $('#login-modal').modal('show');
         });
 
       });
       $('#login').click(function(){
         $.post("{% url 'home' %}", $('form').serialize(), function(result){
-          if(result == 1) window.location.href='{% url 'corpus' %}';
+          if(result == 1) window.location.href='{% url 'download' %}';
           else {
             $('#p-failed').show();
             $('.form-group').addClass('has-error');

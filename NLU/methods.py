@@ -14,25 +14,32 @@ import time
 import zipfile
 from os.path import basename
 
-from NLU.constants import NLU_CORPUS_TOPIC, TEMP_PATH, NLU_HRL_TOPIC
-from NLU.models import Corpus, Hrl
+from NLU.constants import NLU_COP_TOPIC, TEMP_PATH, NLU_HRL_TOPIC, NLU_PAT_TOPIC
+from NLU.models import Corpus, Hrl, Pattern
 
 
 def init():
     for c in Corpus.objects.all():
         domain, topic = c.topic.split('.', 1)
 
-        if domain not in NLU_CORPUS_TOPIC:
-            NLU_CORPUS_TOPIC[domain] = [topic, ]
-        elif topic not in NLU_CORPUS_TOPIC[domain]:
-            NLU_CORPUS_TOPIC[domain].append(topic)
+        if domain not in NLU_COP_TOPIC:
+            NLU_COP_TOPIC[domain] = [topic, ]
+        elif topic not in NLU_COP_TOPIC[domain]:
+            NLU_COP_TOPIC[domain].append(topic)
 
-    for hrl in Hrl.objects.all():
-        domain, topic = hrl.topic.split('_')[1:3]
+    for h in Hrl.objects.all():
+        domain, topic = h.topic.split('_')[1:3]
         if domain not in NLU_HRL_TOPIC:
             NLU_HRL_TOPIC[domain] = [topic, ]
         elif topic not in NLU_HRL_TOPIC[domain]:
             NLU_HRL_TOPIC[domain].append(topic)
+
+    for p in Pattern.objects.all():
+        domain, topic = p.topic.split('.', 1)
+        if domain not in NLU_PAT_TOPIC:
+            NLU_PAT_TOPIC[domain] = [topic, ]
+        elif topic not in NLU_PAT_TOPIC[domain]:
+            NLU_PAT_TOPIC[domain].append(topic)
 
     if not os.path.exists(TEMP_PATH):
         os.makedirs(TEMP_PATH)
@@ -53,10 +60,12 @@ def create_zipfile(topics, sessionid, context='corpus'):
     filepath = os.path.join(TEMP_PATH, filename)
     print filepath
 
-    if context == 'corpus':
+    if context == 'cop':
         rtopics = create_corpus_file(topics, filepath)
     elif context == 'hrl':
         rtopics = create_hrl_file(topics, filepath)
+    elif context == 'pat':
+        rtopics = create_pattern_file(topics, filepath)
 
     print rtopics, 'r'
 
@@ -101,21 +110,48 @@ def create_hrl_file(topics, filepath):
     txt.write(hrl_head)
 
     for topic in topics:
-        if Hrl.objects.filter(topic__contains=topic).exists() and topic not in top_dict:
+
+        t = topic.replace('.', '_')
+
+        if Hrl.objects.filter(topic__contains=t).exists() and topic not in top_dict:
             top_dict[topic] = 1
-            topic_success.append(topic.strip().split('_', 1))
-            hrls = Hrl.objects.filter(topic__contains=topic)
+            topic_success.append(topic.strip().split('.', 1))
+            hrls = Hrl.objects.filter(topic__contains=t)
             for hrl in hrls:
                 # print cp.topic+'\t'+cp.content
                 gender = 'female' if hrl.gender else 'male'
                 txt.write('ref#'+hrl.speech_file+'#'+hrl.speaker+'#'+gender+'#'+hrl.reference_word_sequence+
                           '#'+hrl.topic+'#'+hrl.slot_names+'#'+hrl.slot_values+'\n')
         else:
-            topic_failed.append(topic.strip().split('_', 1))
+            topic_failed.append(topic.strip().split('.', 1))
 
     txt.close()
 
     zip_file(filepath, '.hrl')
+
+    return {'success': topic_success, 'errors': topic_failed}
+
+
+def create_pattern_file(topics, filepath):
+
+    txt = codecs.open(filepath+'.pat', 'w+', 'utf-8')
+
+    topic_success, topic_failed, top_dict = [], [], {}
+    #
+    for topic in topics:
+        if Pattern.objects.filter(topic__exact=topic).exists() and topic not in top_dict:
+            top_dict[topic] = 1
+            topic_success.append(topic.strip().split('.', 1))
+            ps = Pattern.objects.filter(topic__exact=topic)
+            for p in ps:
+                # print cp.topic+'\t'+cp.content
+                txt.write(p.topic+'    '+p.content+'\n')
+        else:
+            topic_failed.append(topic.strip().split('.', 1))
+
+    txt.close()
+
+    zip_file(filepath, '.pat')
 
     return {'success': topic_success, 'errors': topic_failed}
 
