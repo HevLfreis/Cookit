@@ -85,27 +85,7 @@ def get_data(request):
 
 
 @login_required
-def hrl(request):
-    domains = sorted(NLU_HRL_TOPIC.keys())
-    return render(request, 'NLU/hrl.html', {'domains': domains, 'topics': NLU_HRL_TOPIC, 'project_name': PROJECT_NAME})
+def word_segment(request):
+    return render(request, 'NLU/wseg.html', {'project_name': PROJECT_NAME})
 
-
-@login_required
-def downhrl(request):
-    if request.is_ajax():
-
-        try:
-            topics = request.POST.get('topics')
-
-            res = create_zipfile(topics, request.session.get('id'), 'hrl')
-        except Exception, e:
-            print e
-            res = None
-
-        # for line in corpus_file:
-        #     print line
-
-        t = get_template('NLU/dl_res.html')
-        html = t.render(res['topics'])
-        return JsonResponse({'filename': res['filename'], 'html': html}, safe=False)
 

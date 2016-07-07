@@ -25,6 +25,8 @@ urlpatterns = [
 
     url(r'^download/$', views.download, name='download'),
     url(r'^data/$', views.get_data, name='data'),
-    url(r'^hrl/$', views.hrl, name='hrl'),
-    url(r'^downhrl/$', views.downhrl, name='downHrl'),
+
+    url(r'^wseg/$', views.word_segment, name='wseg'),
+
+
 ]
