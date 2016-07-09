@@ -27,7 +27,7 @@ import sys
 #     s.run()
 from os.path import dirname, abspath
 
-import jieba
+# import jieba
 
 
 def corpus_list(pattern):
@@ -58,26 +58,7 @@ def generate_corpus(in_file, out_file, repeat_min=1, repeat_max=1, prop=0.15):
     o_f.close()
 
 
-def word_segment_init(dll, model_file):
-    f=dll.word_segment_init
-    f.argtypes=[c_char_p]
-    f.restype=c_uint
 
-    pModel = c_char_p()
-    pModel.value = model_file
-    print f(pModel)
-
-
-def word_segment_for_string(dll, data_in):
-    f=dll.word_segment_for_string
-    f.argtypes=[c_char_p]
-
-    pData_in = c_char_p()
-    pData_in = data_in
-    pData_out = create_string_buffer('/0'*1024)
-    f(pData_in, pData_out)
-    # print pData_out.value.decode("utf-8")
-    return pData_out.value
 
 
 if __name__ == '__main__':
@@ -95,19 +76,12 @@ if __name__ == '__main__':
     from time import clock
     start=clock()
 
-    dll = cdll.LoadLibrary(base_dir+'\\libadv_func_lib.so')
-    #print dll
 
-    model_file = base_dir+'\\tag.dat_ws'
-
-    word_segment_init(dll,model_file)
-    #print p.memory_info()
-    print word_segment_for_string(dll, str.encode('utf-8'))
     end = clock()
     print (end-start), 'dll'
     start=clock()
-    seg_list = jieba.cut(str, cut_all=False)
-    print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
+    # seg_list = jieba.cut(str, cut_all=False)
+    # print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
     end = clock()
     print (end-start)
 

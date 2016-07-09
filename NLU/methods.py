@@ -12,9 +12,13 @@ import shutil
 import thread
 import time
 import zipfile
+from ctypes import cdll
 from os.path import basename
 
+from Cookit.settings import BASE_DIR
 from NLU.constants import NLU_COP_TOPIC, TEMP_PATH, NLU_HRL_TOPIC, NLU_PAT_TOPIC
+from NLU.enlu import ENLU_init, ENLU_Process, ENLU_Uninit, Word_segment_init, Word_segment_for_string, \
+    Word_segment_uninit
 from NLU.models import Corpus, Hrl, Pattern
 
 
@@ -158,7 +162,6 @@ def create_pattern_file(topics, filepath):
 
 def zip_file(filepath, suffix):
     f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
-
     f.write(filepath+suffix, basename(filepath+suffix))
     f.close()
 
@@ -178,6 +181,27 @@ def do_clean_up(filepath):
         print 'Clean up:', filepath
     except Exception, e:
         print e
+
+
+def hybrid_nlu(words):
+    dll = cdll.LoadLibrary(os.path.join(BASE_DIR, "static/enlu/libhybrid_nlu.2.0.0.dll"))
+    model_file = os.path.join(BASE_DIR, "static/enlu/model")
+    mode = 1
+    ENLU_init(dll, model_file, mode)
+    res = ENLU_Process(dll, words)
+    ENLU_Uninit(dll)
+
+    return res
+
+
+def ws_nlu(words):
+    dll = cdll.LoadLibrary(os.path.join(BASE_DIR, "static/enlu/libadv_func_lib.so"))
+    model_file = os.path.join(BASE_DIR, "static/enlu/tag_ws.dat")
+    Word_segment_init(dll,model_file)
+    res = Word_segment_for_string(dll, words)
+    Word_segment_uninit(dll)
+    return res
+
 
 
 

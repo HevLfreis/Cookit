@@ -16,6 +16,10 @@
         height: 100%;
       }
 
+      .btn {
+        width: 100px;
+      }
+
     </style>
 
   </head>
@@ -37,8 +41,8 @@
             <div class="bs-component">
               <ul class="nav nav-pills nav-stacked">
                 <li><a href="{% url 'download' %}">Download</a></li>
-                <li class="active"><a href="{% url 'wordSegment' %}">Word Segment</a></li>
-                <li><a href="{% url 'modelTest' %}">Model Test</a></li>
+                <li><a href="{% url 'wordSegment' %}">Word Segment</a></li>
+                <li class="active"><a href="{% url 'modelTest' %}">Model Test</a></li>
               </ul>
             </div>
             <hr>
@@ -57,27 +61,19 @@
           </div>
           <div class="col-lg-8">
             <div class="well bs-component">
-              <form class="form-horizontal">
-                <fieldset>
+              <form class="form-horizontal" style="min-height: 500px">
+                <fieldset class="form-field">
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Input</label>
                     <div class="col-lg-10">
                       <fieldset>
-                        <textarea class="form-control" rows="8" id="submit-text"></textarea>
-                      </fieldset>
-                    </div>
-                  </div>
-
-                  <div id="form-last" class="form-group">
-                    <label for="table" class="col-lg-2 control-label">Output</label>
-                    <div class="col-lg-10" style="padding-bottom: 40px">
-                      <fieldset>
-                        <textarea class="form-control" rows="8" id="result-text"></textarea>
+                        <textarea class="form-control" rows="5" id="submit-text"></textarea>
                       </fieldset>
                       </br>
-                      <button id="cut" type="button" class="btn btn-info">Cut-Cut</button>
+                      <button id="submit" type="button" class="btn btn-info" style="margin-right: 20px">Submit</button>
                     </div>
                   </div>
+                  </br>
                 </fieldset>
               </form>
             </div>
@@ -96,10 +92,12 @@
     <script src="/static/cookit/js/filedrop-min.js"></script>
     <script src="/static/cookit/js/xlsx.full.min.js"></script>
     <script type="text/javascript">
-      $('#cut').click(function(){
-        $.post('/wseg/', {words:$('#submit-text').val()}, function(result){
-          $('#result-text').val(result);
-
+      $('#submit').click(function(){
+        var $sumbit = $(this);
+        $sumbit.addClass('disabled');
+        $.post('/mtest/', {words:$('#submit-text').val()}, function(result){
+          $('.form-field').append(result);
+          $sumbit.removeClass('disabled')
         })
       });
     </script>

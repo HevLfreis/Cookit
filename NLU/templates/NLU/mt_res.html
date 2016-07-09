@@ -1,0 +1,23 @@
+</hr>
+<div class="form-group">
+
+  <label for="table" class="col-lg-2 control-label">Domain</label>
+  <div class="col-lg-10" style="padding-bottom: 40px">
+      <h3><span class="label label-primary">{{ domain }}</span></h3>
+  </div>
+
+  <label for="table" class="col-lg-2 control-label">Output</label>
+  <div class="col-lg-10" style="padding-bottom: 40px">
+    <h2>
+      {% for word in words %}
+        {% if word|length == 1 %}
+          {{ word.0 }}
+        {% else %}
+          <span class="text-danger"><strong><ruby>{{ word.1 }} <rt>{{ word.0 }} </rt></ruby></strong></span>
+        {% endif %}
+      {% endfor %}
+    </h2>
+    <button id="right" type="button" class="btn btn-success"><li class="fa fa-check"></li></button>
+    <button id="wrong" type="button" class="btn btn-danger"><li class="fa fa-times"></li></button>
+  </div>
+</div>

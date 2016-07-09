@@ -1,5 +1,6 @@
 import random
 
+# import jieba
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
@@ -9,7 +10,7 @@ from django.shortcuts import render, redirect
 from django.template.loader import get_template
 
 from NLU.constants import NLU_COP_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC, NLU_PAT_TOPIC
-from NLU.methods import init, create_zipfile
+from NLU.methods import init, create_zipfile, hybrid_nlu, ws_nlu
 
 init()
 
@@ -86,6 +87,43 @@ def get_data(request):
 
 @login_required
 def word_segment(request):
+
+    if request.is_ajax():
+        words = request.POST.get('words')
+
+        # seg_list = jieba.cut(words, cut_all=False)
+
+        # return HttpResponse('|'.join(seg_list))
+        return HttpResponse('No')
     return render(request, 'NLU/wseg.html', {'project_name': PROJECT_NAME})
+
+
+def model_test(request):
+
+    if request.is_ajax():
+        words = request.POST.get('words').encode('utf-8')
+
+        res = hybrid_nlu(words)
+        new_words = ws_nlu(words).split('|')
+
+        # for i, nw in enumerate(new_words):
+        #     if nw in res['slot']:
+        #         new_words.insert(i, '@'+res['slot'][nw])
+
+        for slot in res['slot']:
+            idx = words.find(slot)
+            words = words[:idx]+'@'+res['slot'][slot]+'='+slot+'@'+words[idx+len(slot):]
+
+        word_list = words.split('@')
+
+        for i, word in enumerate(word_list):
+            if '>=' in word:
+                word_list[i] = word.split('=')
+            else:
+                word_list[i] = [word]
+
+        print str(word_list).decode('string_escape')
+        return render(request, 'NLU/mt_res.html', {'domain': res['domain'], 'words': word_list})
+    return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME})
 
 

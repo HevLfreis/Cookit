@@ -26,7 +26,8 @@ urlpatterns = [
     url(r'^download/$', views.download, name='download'),
     url(r'^data/$', views.get_data, name='data'),
 
-    url(r'^wseg/$', views.word_segment, name='wseg'),
+    url(r'^wseg/$', views.word_segment, name='wordSegment'),
+    url(r'^mtest/$', views.model_test, name='modelTest'),
 
 
 ]
