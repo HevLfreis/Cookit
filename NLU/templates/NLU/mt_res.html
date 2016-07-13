@@ -1,9 +1,12 @@
 </hr>
 <div class="form-group">
+  <div class="progress">
+    <div class="progress-bar progress-bar-info" style="width: {{ proc }}%;"></div>
+  </div>
 
   <label for="table" class="col-lg-2 control-label">Domain</label>
   <div class="col-lg-10" style="padding-bottom: 40px">
-      <h3><span class="label label-primary">{{ domain }}</span></h3>
+    <h3><span class="label label-primary">{{ domain }}</span></h3>
   </div>
 
   <label for="table" class="col-lg-2 control-label">Output</label>
@@ -17,7 +20,7 @@
         {% endif %}
       {% endfor %}
     </h2>
-    <button id="right" type="button" class="btn btn-success"><li class="fa fa-check"></li></button>
-    <button id="wrong" type="button" class="btn btn-danger"><li class="fa fa-times"></li></button>
+    <button id="right" type="button" class="btn btn-success" onclick="judge({{ wid }}, 1)"><li class="fa fa-check"></li></button>
+    <button id="wrong" type="button" class="btn btn-danger" onclick="judge({{ wid }}, 0)"><li class="fa fa-times"></li></button>
   </div>
 </div>

@@ -28,6 +28,7 @@ urlpatterns = [
 
     url(r'^wseg/$', views.word_segment, name='wordSegment'),
     url(r'^mtest/$', views.model_test, name='modelTest'),
+    # url(r'^mtest/(?P<tot>[0-1])/(?P<previd>[0-9]+)/$', views.model_test, name='modelTest'),
 
 
 ]

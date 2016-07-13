@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# coding: utf-8
 import random
 
 # import jieba
@@ -8,9 +10,11 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.template.loader import get_template
+from django.utils import timezone
 
 from NLU.constants import NLU_COP_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC, NLU_PAT_TOPIC
 from NLU.methods import init, create_zipfile, hybrid_nlu, ws_nlu
+from NLU.models import ModelTest
 
 init()
 
@@ -98,32 +102,80 @@ def word_segment(request):
     return render(request, 'NLU/wseg.html', {'project_name': PROJECT_NAME})
 
 
+@login_required
 def model_test(request):
 
     if request.is_ajax():
-        words = request.POST.get('words').encode('utf-8')
 
-        res = hybrid_nlu(words)
-        new_words = ws_nlu(words).split('|')
+        row = request.POST.get('row')
+        previd = request.POST.get('previd')
 
-        # for i, nw in enumerate(new_words):
-        #     if nw in res['slot']:
-        #         new_words.insert(i, '@'+res['slot'][nw])
+        if not previd:
+            words = request.POST.get('words').encode('utf-8')
 
-        for slot in res['slot']:
-            idx = words.find(slot)
-            words = words[:idx]+'@'+res['slot'][slot]+'='+slot+'@'+words[idx+len(slot):]
+            words_list = words.split(u'。'.encode('utf-8'))
 
-        word_list = words.split('@')
+            request.session['proc_words'] = {request.session.session_key: words_list}
+            request.session['proc_idx'] = 0
+            request.session['proc_len'] = float(len(words_list))
+            idx = 0
+            words = request.session['proc_words'][request.session.session_key][idx]
 
-        for i, word in enumerate(word_list):
-            if '>=' in word:
-                word_list[i] = word.split('=')
+        else:
+
+            idx = request.session['proc_idx']
+            print previd, idx
+            words = request.session['proc_words'][request.session.session_key][idx-1]
+            mt = ModelTest.objects.get(id=previd, creator=request.user)
+
+            print words, mt.words
+
+            if mt.words == words:
+                mt.status = -1 if row == '0' else 1
+                mt.save()
             else:
-                word_list[i] = [word]
+                return HttpResponse(-1)
 
-        print str(word_list).decode('string_escape')
-        return render(request, 'NLU/mt_res.html', {'domain': res['domain'], 'words': word_list})
-    return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME})
+            words = request.session['proc_words'][request.session.session_key][idx].encode('utf-8')
+
+        print words
+
+        res = nlu_process(request, words)
+        print res
+
+        request.session['proc_idx'] += 1
+        proc = idx / request.session.get('proc_len') * 100.0
+
+        print str(res['words']).decode('string_escape')
+        return render(request, 'NLU/mt_res.html', {'domain': res['domain'], 'words': res['words'], 'wid': res['id'], 'proc': proc})
+    else:
+        return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME})
+
+
+def nlu_process(request, words):
+
+    res_dict = hybrid_nlu(words)
+
+    res = ''
+    for slot in res_dict['slot']:
+        idx = words.find(slot)
+        res = words[:idx]+'@'+res_dict['slot'][slot]+'='+slot+'@'+words[idx+len(slot):]
+
+    word_list = res.split('@')
+
+    tl = ModelTest(words=words,
+                   result=res,
+                   creator=request.user,
+                   status=0,
+                   created_time=timezone.now())
+    tl.save()
+
+    for i, word in enumerate(word_list):
+        if '>=' in word:
+            word_list[i] = word.split('=')
+        else:
+            word_list[i] = [word]
+
+    return {'domain': res_dict['domain'], 'words': word_list, 'id': tl.id}
 
 

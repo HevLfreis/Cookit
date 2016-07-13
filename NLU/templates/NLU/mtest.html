@@ -46,22 +46,22 @@
               </ul>
             </div>
             <hr>
-            <div class="bs-component" style="padding-top: 60px">
-              <div class="panel panel-info">
-                <div class="panel-heading">
-                  <h3 class="panel-title">How To</h3>
-                </div>
-                <div class="panel-body" style="padding:15px 10px 0 0">
-                  <ul>
-                    <li></li></br>
-                  </ul>
-                </div>
-              </div>
-            </div>
+{#            <div class="bs-component" style="padding-top: 60px">#}
+{#              <div class="panel panel-info">#}
+{#                <div class="panel-heading">#}
+{#                  <h3 class="panel-title">How To</h3>#}
+{#                </div>#}
+{#                <div class="panel-body" style="padding:15px 10px 0 0">#}
+{#                  <ul>#}
+{#                    <li></li></br>#}
+{#                  </ul>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
           </div>
           <div class="col-lg-8">
             <div class="well bs-component">
-              <form class="form-horizontal" style="min-height: 500px">
+              <form class="form-horizontal">
                 <fieldset class="form-field">
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Input</label>
@@ -73,10 +73,14 @@
                       <button id="submit" type="button" class="btn btn-info" style="margin-right: 20px">Submit</button>
                     </div>
                   </div>
-                  </br>
                 </fieldset>
               </form>
             </div>
+            <div class="panel panel-default panel-result">
+                <div class="panel-body">
+
+                </div>
+              </div>
           </div>
         </div>
       </div>
@@ -90,16 +94,27 @@
     <script src="/static/plugins/rollbar/js/jquery.rollbar.min.js"></script>
     <script src="/static/cookit/js/rollbar.js"></script>
     <script src="/static/cookit/js/filedrop-min.js"></script>
-    <script src="/static/cookit/js/xlsx.full.min.js"></script>
+
     <script type="text/javascript">
       $('#submit').click(function(){
         var $sumbit = $(this);
         $sumbit.addClass('disabled');
         $.post('/mtest/', {words:$('#submit-text').val()}, function(result){
-          $('.form-field').append(result);
+          var $res = $('.panel-result').find('.panel-body');
+          $res.children().remove();
+          $res.append(result);
           $sumbit.removeClass('disabled')
         })
       });
+
+
+      function judge(id, row) {
+        $.post('/mtest/', {'previd': id, 'row': row}, function(result){
+          var $res = $('.panel-result').find('.panel-body');
+          $res.children().remove();
+          $res.append(result);
+        })
+      }
     </script>
   </body>
 </html>
