@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02722894-5809-4c23-b237-6ccdccfdddc5" name="Default" comment="update hrl fix&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/libadv_func_lib.so" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/cookit/js/jquery-1.7.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cookit/urls.py" afterPath="$PROJECT_DIR$/Cookit/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/constants.py" afterPath="$PROJECT_DIR$/NLU/constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/methods.py" afterPath="$PROJECT_DIR$/NLU/methods.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/NLU/migrations/0001_initial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/models.py" afterPath="$PROJECT_DIR$/NLU/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/templates/NLU/mt_res.html" afterPath="$PROJECT_DIR$/NLU/templates/NLU/mt_res.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/templates/NLU/mtest.html" afterPath="$PROJECT_DIR$/NLU/templates/NLU/mtest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/views.py" afterPath="$PROJECT_DIR$/NLU/views.py" />
     </list>
     <ignored path="Cookit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -270,6 +259,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enlu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -682,9 +703,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18697916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31525424" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19322917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="643" y="39" width="633" height="907" />
