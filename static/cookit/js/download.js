@@ -6,7 +6,6 @@
 
 $('.domain').change(function(){
 
-
     var $form = $(this).parents(".form-group"),
           $topic = $form.next().find('.topic'),
           $submit_text = $form.next().next().find('textarea');
@@ -43,11 +42,11 @@ $('.download').click(function(){
     $dl_btn.addClass('disabled');
 
     $.ajax({
-      url: '/data/',
-      timeout: 50000,
-      type: 'post',
-      data: {topics: $submit_text.val(), t: $dl_btn.attr('id')},
-      success: function (result) {
+        url: '/data/',
+        timeout: 50000,
+        type: 'post',
+        data: {topics: $submit_text.val(), t: $dl_btn.attr('id')},
+        success: function (result) {
         $dl_btn.removeClass('disabled');
         var filename = result.filename;
           console.log($dl_btn.parents().find('#form-last:first'))
@@ -56,111 +55,53 @@ $('.download').click(function(){
         window.location.href='/static/temp/'+filename+'.zip';
         $submit_text.val('');
 
-      }
+        }
     });
 });
 
 fd.jQuery();
 
+function fileProcess(e, files) {
+    var $submit_text = $(this).find('textarea');
+    $.each(files, function (i, file) {
+
+        var str = '';
+        var reader = new FileReader();
+
+        reader.onload = function(e){
+            var data = e.target.result;
+            try {
+              var workbook = XLSX.read(data, {type: 'binary'});
+            }
+            catch(err) {
+                alert("Not supported file: "+file.name);
+                return;
+            }
+
+            var worksheet = workbook.Sheets[workbook.SheetNames[1]];
+            for (z in worksheet) {
+
+                if(z[0] === '!'|| z === 'C1' || z[0] !== 'C') continue;
+                str += worksheet[z].v + ';'
+            }
+            $submit_text.val($submit_text.val()+str);
+        };
+        reader.readAsBinaryString(file.nativeFile);
+    })
+}
+
 $('#cop-file-zone')
-  .filedrop({'input':false})
-  .on('fdsend', function (e, files) {
-    var $submit_text = $(this).find('textarea');
-    $.each(files, function (i, file) {
-
-    var str = '';
-    var reader = new FileReader();
-
-    reader.onload = function(e){
-          var data = e.target.result;
-          try {
-              var workbook = XLSX.read(data, {type: 'binary'});
-          }
-          catch(err) {
-            alert("Not supported file: "+file.name);
-            return;
-          }
-
-          var worksheet = workbook.Sheets[workbook.SheetNames[1]];
-          for (z in worksheet) {
-
-            if(z[0] === '!'|| z === 'C1' || z[0] !== 'C') continue;
-            str += worksheet[z].v + ';'
-          }
-
-          $submit_text.val($submit_text.val()+str);
-
-        };
-        reader.readAsBinaryString(file.nativeFile);
-    })
-  });
-
-
+    .filedrop({'input':false})
+    .on('fdsend', fileProcess);
 $('#hrl-file-zone')
-  .filedrop({'input':false})
-  .on('fdsend', function (e, files) {
-    var $submit_text = $(this).find('textarea');
-    $.each(files, function (i, file) {
-
-    var str = '';
-    var reader = new FileReader();
-
-    reader.onload = function(e){
-          var data = e.target.result;
-          try {
-              var workbook = XLSX.read(data, {type: 'binary'});
-          }
-          catch(err) {
-            alert("Not supported file: "+file.name);
-            return;
-          }
-
-          var worksheet = workbook.Sheets[workbook.SheetNames[1]];
-          for (z in worksheet) {
-
-            if(z[0] === '!'|| z === 'C1' || z[0] !== 'C') continue;
-            str += worksheet[z].v + ';'
-          }
-
-          $submit_text.val($submit_text.val()+str);
-
-        };
-        reader.readAsBinaryString(file.nativeFile);
-    })
-  });
-
+    .filedrop({'input':false})
+    .on('fdsend', fileProcess);
 $('#pat-file-zone')
-  .filedrop({'input':false})
-  .on('fdsend', function (e, files) {
-    var $submit_text = $(this).find('textarea');
-    $.each(files, function (i, file) {
+    .filedrop({'input':false})
+    .on('fdsend', fileProcess);
 
-    var str = '';
-    var reader = new FileReader();
 
-    reader.onload = function(e){
-          var data = e.target.result;
-          try {
-              var workbook = XLSX.read(data, {type: 'binary'});
-          }
-          catch(err) {
-            alert("Not supported file: "+file.name);
-            return;
-          }
 
-          var worksheet = workbook.Sheets[workbook.SheetNames[1]];
-          for (z in worksheet) {
-
-            if(z[0] === '!'|| z === 'C1' || z[0] !== 'C') continue;
-            str += worksheet[z].v + ';'
-          }
-
-          $submit_text.val($submit_text.val()+str);
-
-        };
-        reader.readAsBinaryString(file.nativeFile);
-    })
-  });
 
 
 //var czone = new FileDrop('cop-file-zone', {'input':false}),

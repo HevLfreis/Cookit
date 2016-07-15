@@ -59,14 +59,14 @@
 {#              </div>#}
 {#            </div>#}
           </div>
-          <div class="col-lg-8">
+          <div class="col-lg-8 main-panel">
             <div class="well bs-component">
               <form class="form-horizontal">
                 <fieldset class="form-field">
                   <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Input</label>
                     <div class="col-lg-10">
-                      <fieldset>
+                      <fieldset id="file-zone">
                         <textarea class="form-control" rows="5" id="submit-text"></textarea>
                       </fieldset>
                       </br>
@@ -76,11 +76,9 @@
                 </fieldset>
               </form>
             </div>
-            <div class="panel panel-default panel-result">
-                <div class="panel-body">
-
-                </div>
-              </div>
+            <div class="progress" hidden>
+              <div class="progress-bar progress-bar-info"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -99,22 +97,59 @@
       $('#submit').click(function(){
         var $sumbit = $(this);
         $sumbit.addClass('disabled');
+        $('textarea').attr('disabled', true);
         $.post('/mtest/', {words:$('#submit-text').val()}, function(result){
-          var $res = $('.panel-result').find('.panel-body');
-          $res.children().remove();
-          $res.append(result);
-          $sumbit.removeClass('disabled')
+          var $res = $('.main-panel');
+          $res.find('.panel-result').remove();
+          $res.append(result.html);
+          $('.progress').show();
+
         })
       });
 
 
       function judge(id, row) {
         $.post('/mtest/', {'previd': id, 'row': row}, function(result){
-          var $res = $('.panel-result').find('.panel-body');
-          $res.children().remove();
-          $res.append(result);
+          var $res = $('.main-panel');
+          $res.find('.panel-result').remove();
+          $res.append(result.html);
+          $('.progress-bar').animate({ width: result.proc.toString()+'%' }, 500);
+
+          if (result.proc == 100) {
+            setTimeout(function(){
+              $('#submit').removeClass('disabled');
+              $('textarea').attr('disabled', false).val('');
+              $('.progress').hide();
+              $('.progress-bar').css('width', 0);
+              $('.panel-result').hide();
+
+            }, 2500)
+          }
+
         })
       }
+
+
+      function fileProcess(e, files) {
+          var $submit_text = $(this).find('textarea');
+          $.each(files, function (i, file) {
+
+              file.readData(
+                  function (str) {
+                    $submit_text.val($submit_text.val()+str+'\n');
+                  },
+                  function (e) { alert('Terrible error!') },
+                  'text'
+              );
+
+          })
+      }
+
+      fd.jQuery();
+
+      $('#file-zone')
+          .filedrop({'input':false})
+          .on('fdsend', fileProcess);
     </script>
   </body>
 </html>

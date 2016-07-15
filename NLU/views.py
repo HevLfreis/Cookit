@@ -3,6 +3,7 @@
 import random
 
 # import jieba
+import re
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
@@ -105,30 +106,52 @@ def word_segment(request):
 @login_required
 def model_test(request):
 
-    if request.is_ajax():
+    if request.method == 'GET':
+
+        # if request.session.get('proc_idx') and request.session.get('proc_idx') < request.session.get('proc_len'):
+        #     idx = request.session['proc_idx']
+        #     words = request.session['proc_words'][request.session.session_key][idx]
+        #     res = nlu_process(request, words)
+        #     print res
+        #
+        #     proc = float(idx) / request.session.get('proc_len') * 100.0
+        #
+        #     print str(res['words']).decode('string_escape')
+        #
+        #     t = get_template('NLU/mt_res.html')
+        #     html = t.render({'domain': res['domain'], 'words': res['words'], 'wid': res['id']})
+        #     return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME, 'html': html, 'proc': proc})
+
+        return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME})
+
+    elif request.is_ajax():
 
         row = request.POST.get('row')
         previd = request.POST.get('previd')
 
         if not previd:
-            words = request.POST.get('words').encode('utf-8')
 
-            words_list = words.split(u'。'.encode('utf-8'))
+            words = request.POST.get('words')
+
+            words_list = filter(None, re.split(ur'[\n\u3002]', words))
+
+            print str(words_list).decode('string_escape')
 
             request.session['proc_words'] = {request.session.session_key: words_list}
             request.session['proc_idx'] = 0
             request.session['proc_len'] = float(len(words_list))
             idx = 0
-            words = request.session['proc_words'][request.session.session_key][idx]
+            words = request.session['proc_words'][request.session.session_key][idx].encode('utf-8')
 
         else:
 
             idx = request.session['proc_idx']
-            print previd, idx
+
+            # print previd, idx
             words = request.session['proc_words'][request.session.session_key][idx-1]
             mt = ModelTest.objects.get(id=previd, creator=request.user)
 
-            print words, mt.words
+            # print words, mt.words
 
             if mt.words == words:
                 mt.status = -1 if row == '0' else 1
@@ -136,32 +159,55 @@ def model_test(request):
             else:
                 return HttpResponse(-1)
 
+            if idx >= request.session.get('proc_len'):
+
+                del request.session['proc_words']
+                del request.session['proc_idx']
+                del request.session['proc_len']
+
+                proc = 100
+
+                t = get_template('NLU/mt_comp.html')
+                html = t.render()
+
+                return JsonResponse({'html': html, 'proc': proc})
+
             words = request.session['proc_words'][request.session.session_key][idx].encode('utf-8')
 
-        print words
+        # print words
 
         res = nlu_process(request, words)
-        print res
+        # print res
 
         request.session['proc_idx'] += 1
-        proc = idx / request.session.get('proc_len') * 100.0
+        proc = float(idx) / request.session.get('proc_len') * 100.0
 
-        print str(res['words']).decode('string_escape')
-        return render(request, 'NLU/mt_res.html', {'domain': res['domain'], 'words': res['words'], 'wid': res['id'], 'proc': proc})
+        # print str(res['words']).decode('string_escape')
+
+        t = get_template('NLU/mt_res.html')
+        html = t.render({'domain': res['domain'], 'words': res['words'], 'wid': res['id']})
+
+        return JsonResponse({'html': html, 'proc': proc})
+
     else:
-        return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME})
+        return HttpResponse(status=403)
 
 
 def nlu_process(request, words):
 
     res_dict = hybrid_nlu(words)
 
-    res = ''
+    # print res_dict
+
+    res = words
     for slot in res_dict['slot']:
         idx = words.find(slot)
         res = words[:idx]+'@'+res_dict['slot'][slot]+'='+slot+'@'+words[idx+len(slot):]
 
-    word_list = res.split('@')
+    if re.match("^.*[@].*[@].*$", res):
+        word_list = res.split('@')[:-1]
+    else:
+        word_list = [res]
 
     tl = ModelTest(words=words,
                    result=res,

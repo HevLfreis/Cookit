@@ -1,26 +1,26 @@
-</hr>
-<div class="form-group">
-  <div class="progress">
-    <div class="progress-bar progress-bar-info" style="width: {{ proc }}%;"></div>
-  </div>
+<div class="panel panel-default panel-result">
+  <div class="panel-body">
+    <div class="form-group">
+      <label for="table" class="col-lg-2 control-label">Domain</label>
+      <div class="col-lg-10" style="padding-bottom: 40px">
+        <h3><span class="label label-primary">{{ domain }}</span></h3>
+      </div>
 
-  <label for="table" class="col-lg-2 control-label">Domain</label>
-  <div class="col-lg-10" style="padding-bottom: 40px">
-    <h3><span class="label label-primary">{{ domain }}</span></h3>
-  </div>
-
-  <label for="table" class="col-lg-2 control-label">Output</label>
-  <div class="col-lg-10" style="padding-bottom: 40px">
-    <h2>
-      {% for word in words %}
-        {% if word|length == 1 %}
-          {{ word.0 }}
-        {% else %}
-          <span class="text-danger"><strong><ruby>{{ word.1 }} <rt>{{ word.0 }} </rt></ruby></strong></span>
-        {% endif %}
-      {% endfor %}
-    </h2>
-    <button id="right" type="button" class="btn btn-success" onclick="judge({{ wid }}, 1)"><li class="fa fa-check"></li></button>
-    <button id="wrong" type="button" class="btn btn-danger" onclick="judge({{ wid }}, 0)"><li class="fa fa-times"></li></button>
+      <label for="table" class="col-lg-2 control-label">Output</label>
+      <div class="col-lg-10" style="padding-bottom: 40px">
+        <h2>
+          {% for word in words %}
+            {% if word|length == 1 %}
+              {{ word.0 }}
+            {% else %}
+              <span class="text-danger"><strong><ruby>{{ word.1 }} <rt>{{ word.0 }} </rt></ruby></strong></span>
+            {% endif %}
+          {% endfor %}
+        </h2>
+        <button id="right" type="button" class="btn btn-success" onclick="judge({{ wid }}, 1, '{{ nproc }}%')"><li class="fa fa-check"></li></button>
+        <button id="wrong" type="button" class="btn btn-danger" onclick="judge({{ wid }}, 0, '{{ nproc }}%')"><li class="fa fa-times"></li></button>
+      </div>
+    </div>
   </div>
 </div>
+
