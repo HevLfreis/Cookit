@@ -1,15 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 import random
-
-# import jieba
 import re
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
-# Create your views here.
 from django.template.loader import get_template
 from django.utils import timezone
 
@@ -17,6 +14,7 @@ from NLU.constants import NLU_COP_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC, NLU_PAT_TO
 from NLU.methods import init, create_zipfile, hybrid_nlu, ws_nlu
 from NLU.models import ModelTest
 
+# Create your views here.
 init()
 
 # print NLU_PAT_TOPIC
@@ -94,12 +92,17 @@ def get_data(request):
 def word_segment(request):
 
     if request.is_ajax():
+
         words = request.POST.get('words')
 
-        # seg_list = jieba.cut(words, cut_all=False)
+        algo_type = request.POST.get('type')
 
-        # return HttpResponse('|'.join(seg_list))
-        return HttpResponse('No')
+        print algo_type
+
+        if not words:
+            return HttpResponse('')
+
+        return HttpResponse(ws_nlu(words.encode('utf-8')))
     return render(request, 'NLU/wseg.html', {'project_name': PROJECT_NAME})
 
 
@@ -133,9 +136,12 @@ def model_test(request):
 
             words = request.POST.get('words')
 
+            if words == '':
+                return HttpResponse(0)
+
             words_list = filter(None, re.split(ur'[\n\u3002]', words))
 
-            print str(words_list).decode('string_escape')
+            # print str(words_list).decode('string_escape')
 
             request.session['proc_words'] = {request.session.session_key: words_list}
             request.session['proc_idx'] = 0

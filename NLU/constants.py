@@ -23,3 +23,6 @@ TEMP_PATH = os.path.join(STATIC_FOLDER, 'temp')
 
 HYBRID_DLL = cdll.LoadLibrary(os.path.join(BASE_DIR, "static/enlu/libhybrid_nlu.2.0.0.dll"))
 HYBRID_MODEL_FILE = os.path.join(BASE_DIR, "static/enlu/model")
+
+CRF_DLL = cdll.LoadLibrary(os.path.join(BASE_DIR, "static/enlu/libadv_func_lib.so"))
+CRF_MODEL_FILE = os.path.join(BASE_DIR, "static/enlu/tag_ws.dat")

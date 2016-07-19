@@ -16,7 +16,8 @@ from ctypes import cdll
 from os.path import basename
 
 from Cookit.settings import BASE_DIR
-from NLU.constants import NLU_COP_TOPIC, TEMP_PATH, NLU_HRL_TOPIC, NLU_PAT_TOPIC, HYBRID_MODEL_FILE, HYBRID_DLL
+from NLU.constants import NLU_COP_TOPIC, TEMP_PATH, NLU_HRL_TOPIC, NLU_PAT_TOPIC, HYBRID_MODEL_FILE, HYBRID_DLL, CRF_DLL, \
+    CRF_MODEL_FILE
 from NLU.enlu import ENLU_init, ENLU_Process, ENLU_Uninit, Word_segment_init, Word_segment_for_string, \
     Word_segment_uninit
 from NLU.models import Corpus, Hrl, Pattern
@@ -53,6 +54,7 @@ def init():
         os.makedirs(TEMP_PATH)
 
     ENLU_init(HYBRID_DLL, HYBRID_MODEL_FILE, 1)
+    Word_segment_init(CRF_DLL, CRF_MODEL_FILE)
 
 
 def create_zipfile(topics, sessionid, context='corpus'):
@@ -194,11 +196,8 @@ def hybrid_nlu(words):
 
 
 def ws_nlu(words):
-    dll = cdll.LoadLibrary(os.path.join(BASE_DIR, "static/enlu/libadv_func_lib.so"))
-    model_file = os.path.join(BASE_DIR, "static/enlu/tag_ws.dat")
-    Word_segment_init(dll, model_file)
-    res = Word_segment_for_string(dll, words)
-    Word_segment_uninit(dll)
+    res = Word_segment_for_string(CRF_DLL, words)
+    # Word_segment_uninit(dll)
     return res
 
 

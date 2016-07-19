@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="/static/bootstrap/css/custom.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/plugins/rollbar/css/jquery.rollbar.css">
+    <link rel="stylesheet" href="/static/plugins/icheck/all.css">
     <style>
 
 	    body,html {
         width: 100%;
         height: 100%;
       }
-
     </style>
-
   </head>
   <body>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -42,18 +41,6 @@
               </ul>
             </div>
             <hr>
-            <div class="bs-component" style="padding-top: 60px">
-              <div class="panel panel-info">
-                <div class="panel-heading">
-                  <h3 class="panel-title">How To</h3>
-                </div>
-                <div class="panel-body" style="padding:15px 10px 0 0">
-                  <ul>
-                    <li></li></br>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
           <div class="col-lg-8">
             <div class="well bs-component">
@@ -68,14 +55,32 @@
                     </div>
                   </div>
 
-                  <div id="form-last" class="form-group">
+                  <div class="form-group">
                     <label for="table" class="col-lg-2 control-label">Output</label>
                     <div class="col-lg-10" style="padding-bottom: 40px">
                       <fieldset>
                         <textarea class="form-control" rows="8" id="result-text"></textarea>
                       </fieldset>
-                      </br>
+                    </div>
+
+                  </div>
+                  <div class="form-group">
+                    <label for="table" class="col-lg-2 control-label">Algo</label>
+                    <div class="col-lg-10">
+                      <label style="padding-right: 15px">
+                        <input type="radio" name="algo" class="minimal" value="0" checked>
+                         CRF
+                      </label>
+                      <label>
+                        <input type="radio" name="algo" class="minimal" value="1">
+                         DCB
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-10 col-lg-offset-2" style="padding-bottom: 40px">
                       <button id="cut" type="button" class="btn btn-info">Cut-Cut</button>
+                      <button id="download" type="button" class="btn btn-success">Download</button>
                     </div>
                   </div>
                 </fieldset>
@@ -94,13 +99,19 @@
     <script src="/static/plugins/rollbar/js/jquery.rollbar.min.js"></script>
     <script src="/static/cookit/js/rollbar.js"></script>
     <script src="/static/cookit/js/filedrop-min.js"></script>
+    <script src="/static/plugins/icheck/icheck.min.js"></script>
     <script src="/static/cookit/js/xlsx.full.min.js"></script>
     <script type="text/javascript">
       $('#cut').click(function(){
-        $.post('/wseg/', {words:$('#submit-text').val()}, function(result){
+        if($('#submit-text').val() == '') return;
+        $.post('/wseg/', {words:$('#submit-text').val(), type:$('input[type="radio"].minimal:checked').val()}, function(result){
           $('#result-text').val(result);
 
         })
+      });
+
+      $('input[type="radio"].minimal').iCheck({
+        radioClass: 'iradio_flat-blue'
       });
     </script>
   </body>

@@ -4,7 +4,7 @@
  * Time: 20:04
  */
 
-$('body, .box-body').rollbar({
+$('body').rollbar({
   scroll: 'vertical',
   sliderOpacity: 0,
   zIndex: 2000,
@@ -12,4 +12,5 @@ $('body, .box-body').rollbar({
   wheelSpeed: 50,
   touchSpeed: 0.25,
   sliderSize: '25%',
+  pathPadding: '10px',
 });

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/bootstrap/css/custom.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/plugins/rollbar/css/jquery.rollbar.css">
+    <link rel="stylesheet" href="/static/plugins/icheck/skins/all.css">
     <style>
 
 	    body,html {
@@ -95,10 +96,19 @@
 
     <script type="text/javascript">
       $('#submit').click(function(){
+
         var $sumbit = $(this);
         $sumbit.addClass('disabled');
         $('textarea').attr('disabled', true);
         $.post('/mtest/', {words:$('#submit-text').val()}, function(result){
+
+          if(result == 0) {
+            $('#submit').removeClass('disabled');
+            $('textarea').attr('disabled', false).val('');
+
+            return;
+          }
+
           var $res = $('.main-panel');
           $res.find('.panel-result').remove();
           $res.append(result.html);
@@ -110,6 +120,7 @@
 
       function judge(id, row) {
         $.post('/mtest/', {'previd': id, 'row': row}, function(result){
+
           var $res = $('.main-panel');
           $res.find('.panel-result').remove();
           $res.append(result.html);
@@ -128,6 +139,8 @@
 
         })
       }
+
+      alert(0.2 + 0.3)
 
 
       function fileProcess(e, files) {
