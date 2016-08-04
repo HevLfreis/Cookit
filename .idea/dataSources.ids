@@ -20,8 +20,8 @@
       <table id="11" parent="1" name="django_session"/>
       <table id="12" parent="1" name="nlu_corpus"/>
       <table id="13" parent="1" name="nlu_hrl"/>
-      <table id="14" parent="1" name="nlu_modeltest"/>
-      <table id="15" parent="1" name="nlu_pattern"/>
+      <table id="14" parent="1" name="nlu_pattern"/>
+      <table id="15" parent="1" name="nlu_modelvalidate"/>
       <column id="16" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
@@ -454,64 +454,64 @@ model</columns>
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
-      <column id="116" parent="14" name="words">
+      <column id="116" parent="14" name="topic">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="117" parent="14" name="content">
         <mandatory>1</mandatory>
         <data-type>varchar(200)</data-type>
       </column>
-      <column id="117" parent="14" name="result">
+      <column id="118" parent="14" name="md5">
         <mandatory>1</mandatory>
-        <data-type>varchar(200)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
-      <column id="118" parent="14" name="status">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="119" parent="14" name="created_time">
+      <column id="119" parent="14" name="last_modified">
         <mandatory>1</mandatory>
         <data-type>datetime(6)</data-type>
       </column>
-      <column id="120" parent="14" name="creator_id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <index id="121" parent="14" name="NLU_modeltest_creator_id_b8deaed8_fk_auth_user_id">
-        <columns>creator_id</columns>
-        <desc-columns></desc-columns>
-      </index>
-      <key id="122" parent="14" name="PRIMARY">
+      <key id="120" parent="14" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <foreign-key id="123" parent="14" name="NLU_modeltest_creator_id_b8deaed8_fk_auth_user_id">
+      <column id="121" parent="15" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="122" parent="15" name="words">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="123" parent="15" name="result">
+        <mandatory>1</mandatory>
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="124" parent="15" name="status">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="125" parent="15" name="created_time">
+        <mandatory>1</mandatory>
+        <data-type>datetime(6)</data-type>
+      </column>
+      <column id="126" parent="15" name="creator_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="127" parent="15" name="NLU_modeltest_creator_id_b8deaed8_fk_auth_user_id">
+        <columns>creator_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="128" parent="15" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="129" parent="15" name="NLU_modeltest_creator_id_b8deaed8_fk_auth_user_id">
         <columns>creator_id</columns>
         <ref-key>~.auth_user.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
-      <column id="124" parent="15" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="125" parent="15" name="topic">
-        <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
-      </column>
-      <column id="126" parent="15" name="content">
-        <mandatory>1</mandatory>
-        <data-type>varchar(200)</data-type>
-      </column>
-      <column id="127" parent="15" name="md5">
-        <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
-      </column>
-      <column id="128" parent="15" name="last_modified">
-        <mandatory>1</mandatory>
-        <data-type>datetime(6)</data-type>
-      </column>
-      <key id="129" parent="15" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
     </database-model>
   </data-source>
 </component>

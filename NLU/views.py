@@ -10,9 +10,10 @@ from django.shortcuts import render, redirect
 from django.template.loader import get_template
 from django.utils import timezone
 
-from NLU.constants import NLU_COP_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC, NLU_PAT_TOPIC
+from NLU.constants import NLU_COP_TOPIC, PROJECT_NAME, NLU_HRL_TOPIC, NLU_PAT_TOPIC, MODELS, HYBRID_DLL
+from NLU.enlu import ENLU_init, ENLU_Uninit
 from NLU.methods import init, create_zipfile, hybrid_nlu, ws_nlu
-from NLU.models import ModelTest
+from NLU.models import ModelValidate
 
 # Create your views here.
 init()
@@ -103,6 +104,7 @@ def word_segment(request):
             return HttpResponse('')
 
         return HttpResponse(ws_nlu(words.encode('utf-8')))
+    
     return render(request, 'NLU/wseg.html', {'project_name': PROJECT_NAME})
 
 
@@ -111,21 +113,7 @@ def model_test(request):
 
     if request.method == 'GET':
 
-        # if request.session.get('proc_idx') and request.session.get('proc_idx') < request.session.get('proc_len'):
-        #     idx = request.session['proc_idx']
-        #     words = request.session['proc_words'][request.session.session_key][idx]
-        #     res = nlu_process(request, words)
-        #     print res
-        #
-        #     proc = float(idx) / request.session.get('proc_len') * 100.0
-        #
-        #     print str(res['words']).decode('string_escape')
-        #
-        #     t = get_template('NLU/mt_res.html')
-        #     html = t.render({'domain': res['domain'], 'words': res['words'], 'wid': res['id']})
-        #     return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME, 'html': html, 'proc': proc})
-
-        return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME})
+        return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME, 'models': MODELS})
 
     elif request.is_ajax():
 
@@ -135,9 +123,14 @@ def model_test(request):
         if not previd:
 
             words = request.POST.get('words')
+            mode = request.POST.get('mode')
 
             if words == '':
                 return HttpResponse(0)
+
+            # print MODELS[mode]
+
+            ENLU_init(HYBRID_DLL, MODELS[mode], 1)
 
             words_list = filter(None, re.split(ur'[\n\u3002]', words))
 
@@ -155,7 +148,7 @@ def model_test(request):
 
             # print previd, idx
             words = request.session['proc_words'][request.session.session_key][idx-1]
-            mt = ModelTest.objects.get(id=previd, creator=request.user)
+            mt = ModelValidate.objects.get(id=previd, creator=request.user)
 
             # print words, mt.words
 
@@ -170,6 +163,8 @@ def model_test(request):
                 del request.session['proc_words']
                 del request.session['proc_idx']
                 del request.session['proc_len']
+
+                ENLU_Uninit(HYBRID_DLL)
 
                 proc = 100
 
@@ -215,12 +210,12 @@ def nlu_process(request, words):
     else:
         word_list = [res]
 
-    tl = ModelTest(words=words,
-                   result=res,
-                   creator=request.user,
-                   status=0,
-                   created_time=timezone.now())
-    tl.save()
+    mv = ModelValidate(words=words,
+                       result=res,
+                       creator=request.user,
+                       status=0,
+                       created_time=timezone.now())
+    mv.save()
 
     for i, word in enumerate(word_list):
         if '>=' in word:
@@ -228,6 +223,6 @@ def nlu_process(request, words):
         else:
             word_list[i] = [word]
 
-    return {'domain': res_dict['domain'], 'words': word_list, 'id': tl.id}
+    return {'domain': res_dict['domain'], 'words': word_list, 'id': mv.id}
 
 

@@ -24,8 +24,14 @@ from NLU.models import Corpus, Hrl, Pattern
 
 
 def init():
+
     for c in Corpus.objects.all():
-        domain, topic = c.topic.split('.', 1)
+
+        try:
+
+            domain, topic = c.topic.split('.', 1)
+        except Exception, e:
+            print e, c.id, c.topic
 
         if domain not in NLU_COP_TOPIC:
             NLU_COP_TOPIC[domain] = [topic, ]
@@ -33,6 +39,7 @@ def init():
             NLU_COP_TOPIC[domain].append(topic)
 
     for h in Hrl.objects.all():
+
         domain, topic = h.topic.split('_')[1:3]
         if domain not in NLU_HRL_TOPIC:
             NLU_HRL_TOPIC[domain] = [topic, ]
@@ -40,6 +47,7 @@ def init():
             NLU_HRL_TOPIC[domain].append(topic)
 
     for p in Pattern.objects.all():
+
         domain, topic = p.topic.split('.', 1)
         if domain not in NLU_PAT_TOPIC:
             NLU_PAT_TOPIC[domain] = [topic, ]
@@ -53,7 +61,6 @@ def init():
         shutil.rmtree(TEMP_PATH)
         os.makedirs(TEMP_PATH)
 
-    ENLU_init(HYBRID_DLL, HYBRID_MODEL_FILE, 1)
     Word_segment_init(CRF_DLL, CRF_MODEL_FILE)
 
 
@@ -75,12 +82,13 @@ def create_zipfile(topics, sessionid, context='corpus'):
     elif context == 'pat':
         rtopics = create_pattern_file(topics, filepath)
 
-    print rtopics, 'r'
+    # print rtopics, 'r'
 
     thread.start_new_thread(do_clean_up_sched, (filepath,))
     return {'filename': filename, 'topics': rtopics}
 
 
+# Todo: add topic duplicate
 def create_corpus_file(topics, filepath):
 
     txt = codecs.open(filepath+'.txt', 'w+', 'utf-8')
@@ -88,13 +96,14 @@ def create_corpus_file(topics, filepath):
     topic_success, topic_failed, top_dict = [], [], {}
     #
     for topic in topics:
-        if Corpus.objects.filter(topic__exact=topic).exists() and topic not in top_dict:
-            top_dict[topic] = 1
-            topic_success.append(topic.strip().split('.', 1))
-            cps = Corpus.objects.filter(topic__exact=topic)
-            for cp in cps:
-                # print cp.topic+'\t'+cp.content
-                txt.write(cp.topic+'    '+cp.content+'\n')
+        if Corpus.objects.filter(topic__exact=topic).exists():
+            if topic not in top_dict:
+                top_dict[topic] = 1
+                topic_success.append(topic.strip().split('.', 1))
+                cps = Corpus.objects.filter(topic__exact=topic)
+                for cp in cps:
+                    # print cp.topic+'\t'+cp.content
+                    txt.write(cp.topic+'    '+cp.content+'\n')
         else:
             topic_failed.append(topic.strip().split('.', 1))
 
@@ -121,15 +130,16 @@ def create_hrl_file(topics, filepath):
 
         t = topic.replace('.', '_')
 
-        if Hrl.objects.filter(topic__contains=t).exists() and topic not in top_dict:
-            top_dict[topic] = 1
-            topic_success.append(topic.strip().split('.', 1))
-            hrls = Hrl.objects.filter(topic__contains=t)
-            for hrl in hrls:
-                # print cp.topic+'\t'+cp.content
-                gender = 'female' if hrl.gender else 'male'
-                txt.write('ref#'+hrl.speech_file+'#'+hrl.speaker+'#'+gender+'#'+hrl.reference_word_sequence+
-                          '#'+hrl.topic+'#'+hrl.slot_names+'#'+hrl.slot_values+'\n')
+        if Hrl.objects.filter(topic__contains=t).exists():
+            if topic not in top_dict:
+                top_dict[topic] = 1
+                topic_success.append(topic.strip().split('.', 1))
+                hrls = Hrl.objects.filter(topic__contains=t)
+                for hrl in hrls:
+                    # print cp.topic+'\t'+cp.content
+                    gender = 'female' if hrl.gender else 'male'
+                    txt.write('ref#'+hrl.speech_file+'#'+hrl.speaker+'#'+gender+'#'+hrl.reference_word_sequence+
+                              '#'+hrl.topic+'#'+hrl.slot_names+'#'+hrl.slot_values+'\n')
         else:
             topic_failed.append(topic.strip().split('.', 1))
 
@@ -147,13 +157,14 @@ def create_pattern_file(topics, filepath):
     topic_success, topic_failed, top_dict = [], [], {}
     #
     for topic in topics:
-        if Pattern.objects.filter(topic__exact=topic).exists() and topic not in top_dict:
-            top_dict[topic] = 1
-            topic_success.append(topic.strip().split('.', 1))
-            ps = Pattern.objects.filter(topic__exact=topic)
-            for p in ps:
-                # print cp.topic+'\t'+cp.content
-                txt.write(p.topic+'    '+p.content+'\n')
+        if Pattern.objects.filter(topic__exact=topic).exists():
+            if topic not in top_dict:
+                top_dict[topic] = 1
+                topic_success.append(topic.strip().split('.', 1))
+                ps = Pattern.objects.filter(topic__exact=topic)
+                for p in ps:
+                    # print cp.topic+'\t'+cp.content
+                    txt.write(p.topic+'    '+p.content+'\n')
         else:
             topic_failed.append(topic.strip().split('.', 1))
 
@@ -188,16 +199,12 @@ def do_clean_up(filepath):
 
 
 def hybrid_nlu(words):
-
     res = ENLU_Process(HYBRID_DLL, words)
-    # ENLU_Uninit(dll)
-
     return res
 
 
 def ws_nlu(words):
     res = Word_segment_for_string(CRF_DLL, words)
-    # Word_segment_uninit(dll)
     return res
 
 

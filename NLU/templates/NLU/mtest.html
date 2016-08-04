@@ -65,6 +65,19 @@
               <form class="form-horizontal">
                 <fieldset class="form-field">
                   <div class="form-group">
+                      <label for="select" class="col-lg-2 control-label">Model Select</label>
+                      <div class="col-lg-10">
+                        <select id="mod-select" multiple="" class="domain form-control">
+                          <option selected>Default</option>
+                          {% for k, v in models.items %}
+                            {% if k != 'Default' %}
+                              <option>{{ k }}</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                  <div class="form-group">
                     <label for="select" class="col-lg-2 control-label">Input</label>
                     <div class="col-lg-10">
                       <fieldset id="file-zone">
@@ -99,11 +112,13 @@
 
         var $sumbit = $(this);
         $sumbit.addClass('disabled');
+        $('#mod-select').attr('disabled', true);
         $('textarea').attr('disabled', true);
-        $.post('/mtest/', {words:$('#submit-text').val()}, function(result){
+        $.post('/mtest/', {words:$('#submit-text').val(),mode:$("#mod-select option:selected").text()}, function(result){
 
           if(result == 0) {
             $('#submit').removeClass('disabled');
+            $('#mod-select').attr('disabled', false);
             $('textarea').attr('disabled', false).val('');
 
             return;
@@ -129,6 +144,7 @@
           if (result.proc == 100) {
             setTimeout(function(){
               $('#submit').removeClass('disabled');
+              $('#mod-select').attr('disabled', false);
               $('textarea').attr('disabled', false).val('');
               $('.progress').hide();
               $('.progress-bar').css('width', 0);
@@ -139,9 +155,6 @@
 
         })
       }
-
-      alert(0.2 + 0.3)
-
 
       function fileProcess(e, files) {
           var $submit_text = $(this).find('textarea');

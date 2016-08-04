@@ -5,131 +5,98 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02722894-5809-4c23-b237-6ccdccfdddc5" name="Default" comment="update hrl fix&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/aero.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/aero@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/blue@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/flat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/flat@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/green@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/grey@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/orange.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/orange@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/pink.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/pink@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/purple.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/purple@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/red@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/yellow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/yellow@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/futurico/futurico.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/futurico/futurico@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/line.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/line@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/aero.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/aero@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/blue@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/green@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/grey@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/minimal.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/minimal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/orange.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/orange@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/pink.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/pink@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/purple.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/purple@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/red@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/yellow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/yellow@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/polaris/polaris.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/polaris/polaris@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/aero.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/aero@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/blue@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/green.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/green@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/grey@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/orange.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/orange@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/pink.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/pink@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/purple.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/purple@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/red.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/red@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/square@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/yellow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/yellow@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/_all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/aero.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/flat.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/grey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/orange.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/pink.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/purple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/flat/yellow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/futurico/futurico.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/icheck.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/icheck.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/_all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/aero.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/grey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/line.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/orange.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/pink.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/purple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/line/yellow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/_all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/aero.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/grey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/minimal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/orange.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/pink.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/purple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/minimal/yellow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/polaris/polaris.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/_all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/aero.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/blue.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/green.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/grey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/orange.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/pink.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/purple.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/red.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/square.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/plugins/icheck/square/yellow.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/all_d_single.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/cf_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Car_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Ent_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Gen_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Mes_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Nav_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Phone_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Radio_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/top_2_feature.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/gazetteer.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/idf.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/lexicon.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/lexicon.dat0615" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/lexicon.dat1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/m_data.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/myrules.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/phonetics.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/pos.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/sample.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/slot.model.Enc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NLU/management/commands/syncdata.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/data/out_all_topic2.cop" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/c_m.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Car_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Ent_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Gen_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Mes_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Nav_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Phone_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Radio_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/top_train_data.model" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/cross_ambiguity.TXT" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/d_m.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/dat_sem_map.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/domain_map.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/poi.conf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/slot.config.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/slot.map.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/constants.py" afterPath="$PROJECT_DIR$/NLU/constants.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/methods.py" afterPath="$PROJECT_DIR$/NLU/methods.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/models.py" afterPath="$PROJECT_DIR$/NLU/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/templates/NLU/download.html" afterPath="$PROJECT_DIR$/NLU/templates/NLU/download.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/templates/NLU/mtest.html" afterPath="$PROJECT_DIR$/NLU/templates/NLU/mtest.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/templates/NLU/wseg.html" afterPath="$PROJECT_DIR$/NLU/templates/NLU/wseg.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/tests.py" afterPath="$PROJECT_DIR$/NLU/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NLU/views.py" afterPath="$PROJECT_DIR$/NLU/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/cookit/js/rollbar.js" afterPath="$PROJECT_DIR$/static/cookit/js/rollbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/plugins/rollbar/js/jquery.rollbar.min.js" afterPath="$PROJECT_DIR$/static/plugins/rollbar/js/jquery.rollbar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/cookit/js/download.js" afterPath="$PROJECT_DIR$/static/cookit/js/download.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/data/sync2db.py" afterPath="$PROJECT_DIR$/static/data/sync2db.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/data/out_20160623.txt" afterPath="$PROJECT_DIR$/static/data/out_20160623.pat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/data/out_all_topic.txt" afterPath="$PROJECT_DIR$/static/data/out_all_topic.cop" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/all_d_single.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/all_d_single.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/c_m.txt" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/c_m.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/cf_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/cf_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Car_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Car_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Car_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Car_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Ent_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Ent_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Ent_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Ent_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Gen_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Gen_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Gen_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Gen_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Mes_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Mes_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Mes_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Mes_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Nav_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Nav_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Nav_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Nav_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Phone_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Phone_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Phone_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Phone_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Radio_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Radio_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/Radio_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/Radio_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/top_2_feature.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/top_2_feature.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/classification_model/top_train_data.model" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/classification_model/top_train_data.model" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/cross_ambiguity.TXT" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/cross_ambiguity.TXT" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/d_m.dat" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/d_m.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/dat_sem_map.txt" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/dat_sem_map.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/domain_map.txt" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/domain_map.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/gazetteer.dat" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/gazetteer.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/idf.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/idf.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/lexicon.dat" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/lexicon.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/lexicon.dat0615" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/lexicon.dat0615" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/lexicon.dat1" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/lexicon.dat1" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/m_data.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/m_data.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/myrules.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/myrules.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/phonetics.dat" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/phonetics.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/poi.conf" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/poi.conf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/pos.dat" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/pos.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/sample.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/sample.Enc" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/slot.config.properties" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/slot.config.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/slot.map.dat" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/slot.map.dat" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/static/enlu/model/slot.model.Enc" afterPath="$PROJECT_DIR$/static/enlu/model/model_Default/slot.model.Enc" />
     </list>
     <ignored path="Cookit.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,8 +110,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Cookit$tests.coverage" NAME="tests Coverage Results" MODIFIED="1468561860336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLU" />
-    <SUITE FILE_PATH="coverage/Cookit$sync2db.coverage" NAME="sync2db Coverage Results" MODIFIED="1467339331553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/static/data" />
+    <SUITE FILE_PATH="coverage/Cookit$tests.coverage" NAME="tests Coverage Results" MODIFIED="1470189099620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/NLU" />
+    <SUITE FILE_PATH="coverage/Cookit$sync2db.coverage" NAME="sync2db Coverage Results" MODIFIED="1469067719303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/static/data" />
     <SUITE FILE_PATH="coverage/Cookit$auth.coverage" NAME="auth Coverage Results" MODIFIED="1466136084128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -182,37 +149,17 @@
         <entry file="file://$PROJECT_DIR$/NLU/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="127" column="51" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="51" />
+              <caret line="217" column="13" selection-start-line="217" selection-start-column="13" selection-end-line="217" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mtest.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/mtest.html">
+      <file leaf-file-name="constants.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NLU/constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6502463">
-              <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="download.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/download.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.135135">
-              <caret line="233" column="55" selection-start-line="233" selection-start-column="55" selection-end-line="233" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wseg.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/wseg.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.891892">
-              <caret line="105" column="49" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -222,7 +169,29 @@
         <entry file="file://$PROJECT_DIR$/NLU/methods.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
+              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/NLU/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9222615">
+              <caret line="168" column="29" selection-start-line="168" selection-start-column="29" selection-end-line="168" selection-end-column="29" />
+              <folding>
+                <element signature="e#38#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mtest.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/mtest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="146" column="55" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -233,9 +202,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -254,7 +223,6 @@
       <list>
         <option value="$PROJECT_DIR$/NLU/templates/NLU/index.html" />
         <option value="$PROJECT_DIR$/static/bootstrap/js/custom.js" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/NLU/data.txt" />
         <option value="$PROJECT_DIR$/NLU/pa.txt" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/data_res.html" />
@@ -266,28 +234,34 @@
         <option value="$PROJECT_DIR$/Cookit/settings.py" />
         <option value="$PROJECT_DIR$/Cookit/wsgi.py" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/hrl.html" />
-        <option value="$PROJECT_DIR$/static/data/sync2db.py" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/corpus.html" />
         <option value="$PROJECT_DIR$/static/cookit/js/filedrop.js" />
         <option value="$PROJECT_DIR$/static/rollbar/js/jquery.rollbar.js" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/home.html" />
-        <option value="$PROJECT_DIR$/NLU/models.py" />
         <option value="$PROJECT_DIR$/NLU/enlu.py" />
         <option value="$PROJECT_DIR$/Cookit/urls.py" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/mt_res.html" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/mt_comp.html" />
-        <option value="$PROJECT_DIR$/NLU/tests.py" />
-        <option value="$PROJECT_DIR$/static/cookit/js/download.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/static/bootstrap/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/NLU/templates/NLU/download.html" />
-        <option value="$PROJECT_DIR$/NLU/constants.py" />
-        <option value="$PROJECT_DIR$/NLU/methods.py" />
         <option value="$PROJECT_DIR$/static/cookit/js/rollbar.js" />
         <option value="$PROJECT_DIR$/static/plugins/rollbar/js/jquery.rollbar.min.js" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/wseg.html" />
-        <option value="$PROJECT_DIR$/NLU/views.py" />
+        <option value="$PROJECT_DIR$/NLU/templates/NLU/download.html" />
+        <option value="$PROJECT_DIR$/static/cookit/js/download.js" />
+        <option value="$PROJECT_DIR$/NLU/management/commands/syncdata.py" />
+        <option value="$PROJECT_DIR$/static/data/sync2db.py" />
+        <option value="$PROJECT_DIR$/NLU/models.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/NLU/songci.txt" />
+        <option value="$PROJECT_DIR$/NLU/quansongci.txt" />
+        <option value="$PROJECT_DIR$/NLU/quansongci2.txt" />
+        <option value="D:/web resources/html5up-strata/index.html" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/NLU/templates/NLU/mtest.html" />
+        <option value="$PROJECT_DIR$/NLU/constants.py" />
+        <option value="$PROJECT_DIR$/NLU/views.py" />
+        <option value="$PROJECT_DIR$/NLU/methods.py" />
+        <option value="$PROJECT_DIR$/NLU/tests.py" />
       </list>
     </option>
   </component>
@@ -379,13 +353,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enlu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enlu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cookit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NLU" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
@@ -404,28 +432,28 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\Cookit\static\plugins" />
-      <recent name="D:\projects\Cookit\static\enlu" />
-      <recent name="D:\projects\Cookit\NLU\templates\NLU" />
-      <recent name="D:\projects\Cookit\static\cookit\js" />
       <recent name="D:\projects\Cookit\NLU" />
+      <recent name="D:\projects\Cookit\static\enlu\model" />
+      <recent name="D:\projects\Cookit\static\enlu\model\model_Default" />
+      <recent name="D:\projects\Cookit\static\data\cop" />
+      <recent name="D:\projects\Cookit\static\plugins" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\Cookit\static\enlu\model\model_Default" />
+      <recent name="D:\projects\Cookit\static\data" />
+      <recent name="D:\projects\Cookit\static\data\cop" />
       <recent name="D:\projects\Cookit\static\plugins" />
       <recent name="D:\HTeng\Cookit\NLU" />
-      <recent name="D:\HTeng\Cookit\admin" />
-      <recent name="D:\HTeng\Cookit\Cookit" />
-      <recent name="F:\projects\Cookit\static\bootstrap\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.Cookit">
+  <component name="RunManager" selected="Python.tests">
     <configuration default="false" name="sync2db" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\HevLfreis\AppData\Local\Continuum\Anaconda2\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\HevLfreis\Anaconda2\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/static/data" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -776,53 +804,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10364583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1578125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31525424" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19322917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="643" y="39" width="633" height="907" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5640423" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6039953" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43276837" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55706215" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4960452" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48700565" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299435" sideWeight="0.49791667" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6045198" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.280226" sideWeight="0.4957265" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32768363" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1765625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19322917" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="643" y="39" width="633" height="907" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299435" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -848,34 +853,44 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/NLU/constants.py">
+    <entry file="file://$PROJECT_DIR$/NLU/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="1" selection-end-line="176" selection-end-column="17" />
+          <folding>
+            <element signature="e#38#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/mtest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="55" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/views.py">
+    <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/mtest.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+          <caret line="72" column="54" selection-start-line="72" selection-start-column="54" selection-end-line="72" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/settings.py">
+    <entry file="file://$PROJECT_DIR$/NLU/methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/urls.py">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -890,37 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,14 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16359918">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -996,18 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/97f5a4cf/8dd09dd4-03a9-4af6-913e-66e92bc51845/cookit.nlu_corpus">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/97f5a4cf/8dd09dd4-03a9-4af6-913e-66e92bc51845/cookit.nlu_hrl">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1024,27 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/data/pattern.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/data/sync2db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6994991">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="2" selection-end-line="87" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/management/commands/adduser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49469966">
-          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -1090,33 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/enlu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07081545">
-          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/97f5a4cf/8dd09dd4-03a9-4af6-913e-66e92bc51845/cookit.nlu_modeltest">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="15" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/mt_res.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1131,26 +1046,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cookit/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18845701">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.2587776">
           <caret line="2991" column="3" selection-start-line="2991" selection-start-column="3" selection-end-line="2991" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,15 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="324" column="11" selection-start-line="324" selection-start-column="10" selection-end-line="324" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/cookit/js/download.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1174,23 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08188586">
           <caret line="12" column="6863" selection-start-line="12" selection-start-column="6860" selection-end-line="12" selection-end-column="6863" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8939929">
-          <caret line="65" column="28" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72791517">
-          <caret line="27" column="65" selection-start-line="27" selection-start-column="65" selection-end-line="27" selection-end-column="65" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,47 +1071,168 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23321554">
           <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/download.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.135135">
-          <caret line="233" column="55" selection-start-line="233" selection-start-column="55" selection-end-line="233" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NLU/methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/wseg.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.891892">
+        <state vertical-scroll-proportion="0.0">
           <caret line="105" column="49" selection-start-line="105" selection-start-column="49" selection-end-line="105" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/cookit/js/download.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cookit/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="28" selection-start-line="99" selection-start-column="22" selection-end-line="108" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4499411">
+          <caret line="150" column="8" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/pattern.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/sync2db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.0706713">
+          <caret line="79" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31095406">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/management/commands/syncdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69964665">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/management/commands/adduser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30035335">
+          <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/data/out_20160623.pat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16296296">
+          <caret line="4303" column="0" selection-start-line="4303" selection-start-column="0" selection-end-line="4303" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/web resources/html5up-strata/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91871923">
+          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7667844">
+          <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/97f5a4cf/8dd09dd4-03a9-4af6-913e-66e92bc51845/cookit.nlu_corpus">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="id=762153" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NLU/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="51" selection-start-line="127" selection-start-column="50" selection-end-line="127" selection-end-column="51" />
+          <caret line="217" column="13" selection-start-line="217" selection-start-column="13" selection-end-line="217" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NLU/templates/NLU/mtest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6502463">
-          <caret line="142" column="6" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="55" selection-start-line="146" selection-start-column="55" selection-end-line="146" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/enlu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1766784">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NLU/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9222615">
+          <caret line="168" column="29" selection-start-line="168" selection-start-column="29" selection-end-line="168" selection-end-column="29" />
+          <folding>
+            <element signature="e#38#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

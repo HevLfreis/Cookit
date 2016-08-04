@@ -40,6 +40,8 @@ $('.download').click(function(){
     }
 
     $dl_btn.addClass('disabled');
+    $('textarea').attr('disabled', true);
+    $('body').addClass('waiting');
 
     $.ajax({
         url: '/data/',
@@ -48,13 +50,21 @@ $('.download').click(function(){
         data: {topics: $submit_text.val(), t: $dl_btn.attr('id')},
         success: function (result) {
         $dl_btn.removeClass('disabled');
+        $('textarea').attr('disabled', false);
+        $('body').removeClass('waiting');
+
         var filename = result.filename;
-          console.log($dl_btn.parents().find('#form-last:first'))
+        console.log($dl_btn.parents().find('#form-last:first'))
         $dl_btn.parent().after(result.html);
 
         window.location.href='/static/temp/'+filename+'.zip';
         $submit_text.val('');
 
+        },
+        error: function() {
+            $dl_btn.removeClass('disabled');
+            $('textarea').attr('disabled', false);
+            $('body').removeClass('waiting');
         }
     });
 });

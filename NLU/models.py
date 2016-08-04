@@ -31,7 +31,7 @@ class Hrl(models.Model):
     last_modified = models.DateTimeField()
 
 
-class ModelTest(models.Model):
+class ModelValidate(models.Model):
     words = models.CharField(max_length=200)
     result = models.CharField(max_length=200)
     creator = models.ForeignKey(User, on_delete=models.CASCADE)
