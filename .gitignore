@@ -9,6 +9,7 @@ __pycache__/
 
 # Data file
 static/data/
+static/enlu/
 
 # Distribution / packaging
 .Python

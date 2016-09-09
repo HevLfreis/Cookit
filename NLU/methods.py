@@ -7,6 +7,7 @@
 import codecs
 import datetime
 import os
+import random
 import sched
 import shutil
 import thread
@@ -17,9 +18,9 @@ from os.path import basename
 
 from Cookit.settings import BASE_DIR
 from NLU.constants import NLU_COP_TOPIC, TEMP_PATH, NLU_HRL_TOPIC, NLU_PAT_TOPIC, HYBRID_MODEL_FILE, HYBRID_DLL, CRF_DLL, \
-    CRF_MODEL_FILE
+    CRF_MODEL_FILE, MODELS
 from NLU.enlu import ENLU_init, ENLU_Process, ENLU_Uninit, Word_segment_init, Word_segment_for_string, \
-    Word_segment_uninit
+    Word_segment_uninit, ENLU_Segment
 from NLU.models import Corpus, Hrl, Pattern
 
 
@@ -27,12 +28,7 @@ def init():
 
     for c in Corpus.objects.all():
 
-        try:
-
-            domain, topic = c.topic.split('.', 1)
-        except Exception, e:
-            print e, c.id, c.topic
-
+        domain, topic = c.topic.split('.', 1)
         if domain not in NLU_COP_TOPIC:
             NLU_COP_TOPIC[domain] = [topic, ]
         elif topic not in NLU_COP_TOPIC[domain]:
@@ -176,9 +172,12 @@ def create_pattern_file(topics, filepath):
 
 
 def zip_file(filepath, suffix):
-    f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
-    f.write(filepath+suffix, basename(filepath+suffix))
-    f.close()
+    try:
+        f = zipfile.ZipFile(filepath+'.zip', 'w', zipfile.ZIP_DEFLATED)
+        f.write(filepath+suffix, basename(filepath+suffix))
+        f.close()
+    except Exception, e:
+        print e
 
 
 def do_clean_up_sched(filepath):
@@ -203,8 +202,12 @@ def hybrid_nlu(words):
     return res
 
 
-def ws_nlu(words):
-    res = Word_segment_for_string(CRF_DLL, words)
+def ws_nlu(words, algo):
+    if algo == 0:
+        res = Word_segment_for_string(CRF_DLL, words)
+    else:
+        ENLU_init(HYBRID_DLL, MODELS[random.choice(MODELS.keys())], 1)
+        res = ENLU_Segment(HYBRID_DLL, words)
     return res
 
 

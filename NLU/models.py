@@ -18,6 +18,7 @@ class Pattern(models.Model):
     content = models.CharField(max_length=200)
     md5 = models.CharField(max_length=50)
     last_modified = models.DateTimeField()
+    md8 = models.CharField(max_length=50)
 
 
 class Hrl(models.Model):

@@ -36,30 +36,28 @@
             <h4 class="modal-title">Login to start cooking</h4>
           </div>
           <div class="modal-body well" style="margin: 0">
-
-              <form class="form-horizontal">
-                <fieldset>
-                  <div class="form-group">
-                    <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                    <div class="col-lg-10">
-                      <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Email">
-                    </div>
+            <form class="form-horizontal">
+              <fieldset>
+                <div class="form-group">
+                  <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                  <div class="col-lg-10">
+                    <input type="text" name="username" class="form-control" id="inputEmail" placeholder="Email">
                   </div>
-                  <div class="form-group">
-                    <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-                    <div class="col-lg-10">
-                      <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
-                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                  <div class="col-lg-10">
+                    <input type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
                   </div>
-                  <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                      <p id="p-failed" class="pull-left text-danger" hidden>Login failed</p>
-                      <button type="button" id="login" class="btn btn-primary pull-right">Login</button>
-                    </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-lg-10 col-lg-offset-2">
+                    <p id="p-failed" class="pull-left text-danger" hidden>Login failed</p>
+                    <button type="button" id="login" class="btn btn-primary pull-right">Login</button>
                   </div>
-                </fieldset>
-              </form>
-
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>
@@ -72,7 +70,6 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#">NLU ONLINE PROJ</a></li>
         </ul>
-
       </div>
     </div>
     <div class="jumbotron text-center">
@@ -81,11 +78,11 @@
       <p style="padding-top: 50px"><a href="#" id="start-cooking" class="btn btn-info btn-lg">Start Cooking</a></p>
     </div>
 
-
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/bootstrap/js/custom.js"></script>
     <script type="text/javascript">
+
       $('#start-cooking').click(function(){
         $.get("{% url 'checkLogin' %}", function(result){
 

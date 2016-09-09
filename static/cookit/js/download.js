@@ -54,7 +54,7 @@ $('.download').click(function(){
         $('body').removeClass('waiting');
 
         var filename = result.filename;
-        console.log($dl_btn.parents().find('#form-last:first'))
+        console.log($dl_btn.parents().find('#form-last:first'));
         $dl_btn.parent().after(result.html);
 
         window.location.href='/static/temp/'+filename+'.zip';

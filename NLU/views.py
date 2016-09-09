@@ -16,7 +16,7 @@ from NLU.methods import init, create_zipfile, hybrid_nlu, ws_nlu
 from NLU.models import ModelValidate
 
 # Create your views here.
-init()
+# init()
 
 # print NLU_PAT_TOPIC
 
@@ -41,6 +41,7 @@ def home(request):
                 return HttpResponse(-1)
         else:
             return HttpResponse(-1)
+
     else:
         return render(request, 'NLU/home.html', {'project_name': PROJECT_NAME})
 
@@ -58,7 +59,8 @@ def download(request):
     return render(request, 'NLU/download.html',
                   {'c_domains': c_domains, 'c_topics': NLU_COP_TOPIC,
                    'h_domains': h_domains, 'h_topics': NLU_HRL_TOPIC,
-                   'p_domains': p_domains, 'p_topics': NLU_PAT_TOPIC, 'project_name': PROJECT_NAME})
+                   'p_domains': p_domains, 'p_topics': NLU_PAT_TOPIC,
+                   'project_name': PROJECT_NAME})
 
 
 @login_required
@@ -103,7 +105,7 @@ def word_segment(request):
         if not words:
             return HttpResponse('')
 
-        return HttpResponse(ws_nlu(words.encode('utf-8')))
+        return HttpResponse(ws_nlu(words.encode('utf-8'), algo_type))
     
     return render(request, 'NLU/wseg.html', {'project_name': PROJECT_NAME})
 
@@ -112,7 +114,6 @@ def word_segment(request):
 def model_test(request):
 
     if request.method == 'GET':
-
         return render(request, 'NLU/mtest.html', {'project_name': PROJECT_NAME, 'models': MODELS})
 
     elif request.is_ajax():

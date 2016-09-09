@@ -41,7 +41,7 @@ class Command(BaseCommand):
 
                 print('\rImporting... '+str(i)),
             print '\nSaving...'
-            # Corpus.objects.bulk_create(cops, 1000)
+            Corpus.objects.bulk_create(cops, 1000)
             print 'Saved\n'
 
         for filename in glob.iglob(BASE_DIR+'/static/data/*.hrl'):
@@ -68,7 +68,7 @@ class Command(BaseCommand):
 
                 print('\rImporting... '+str(i)),
             print '\nSaving...'
-            # Hrl.objects.bulk_create(pats, 1000)
+            Hrl.objects.bulk_create(hrls, 1000)
             print 'Saved\n'
 
         for filename in glob.iglob(BASE_DIR+'/static/data/*.pat'):
@@ -95,7 +95,7 @@ class Command(BaseCommand):
 
                 print('\rImporting... '+str(i)),
             print '\nSaving...'
-            # Pattern.objects.bulk_create(pats, 1000)
+            Pattern.objects.bulk_create(pats, 1000)
             print 'Saved\n\nAll Completed'
 
 

@@ -49,6 +49,22 @@ def ENLU_Uninit(dll):
     uninit.restype=c_uint
     uninit()
 
+def ENLU_Segment(dll, inputStr):
+    segmentation = dll.ENLU_WordSeg_PY
+    segmentation.argtypes = [c_char_p, c_char_p, c_int,POINTER(c_int)]
+    segmentation.restype = c_uint
+    #pInputStr = c_char_p(inputStr)
+    #pOutputStr = c_char_p(outputStr)
+    #wordSize = 10
+    bufLen = len(inputStr)*3
+    outputStr = cast(create_string_buffer(bufLen),c_char_p)
+    wordSize = c_int(0)
+    segmentation(inputStr, outputStr, bufLen, byref(wordSize))
+    #print outputStr+";"
+    result = outputStr.value.replace('。','').replace('，','')
+    wordStr = " ".join(result.split("|")).strip()
+    return wordStr
+
 def ENLU_Classify(dll, inputStruct, outputStruct):
     classifyRes = ""
     classify = dll.ENLU_Classify
