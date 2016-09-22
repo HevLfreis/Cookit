@@ -71,6 +71,7 @@ def create_zipfile(topics, sessionid, context='corpus'):
     filepath = os.path.join(TEMP_PATH, filename)
     print filepath
 
+    rtopics = []
     if context == 'cop':
         rtopics = create_corpus_file(topics, filepath)
     elif context == 'hrl':

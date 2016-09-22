@@ -219,4 +219,42 @@
 #                 r_f.write(a+'\t'+o+'\n')
 #             for s in sam:
 #                 r_f.write(a+'\t'+s.rstrip(u'。').replace(' ', '')+'\n')
-
+# import codecs
+#
+# import re
+#
+# # 8m file
+# with codecs.open('199801.txt', 'r', 'utf-8') as i_f \
+#         , codecs.open('result2.txt', 'w', 'utf-8') as r_f:
+#     word_index = {}
+#     for i, line in enumerate(i_f):
+#         print i
+#         words = map(lambda x: x.strip().lstrip('[').split('/')[0], line.split('  ')[1:-1])
+#         for w in words:
+#
+#             # without nums in ch
+#             if len(w) == 1 or re.search(ur"[\uff10-\uff19]", w) is not None:
+#                 continue
+#             if w not in word_index:
+#                 word_index[w] = 1
+#             else:
+#                 word_index[w] += 1
+#
+#     for w, c in sorted(word_index.items(), key=lambda x: x[1], reverse=True):
+#         # print w
+#         # a = raw_input()
+#         r_f.write(w+'\t'+str(c)+'\n')
+#
+#
+# # 22m file
+# with codecs.open('result22m.txt', 'r', 'utf-8') as i_f \
+#         , codecs.open('result22m2.txt', 'w', 'utf-8') as r_f:
+#
+#     for i, line in enumerate(i_f):
+#         print i
+#         w, n = line.strip().split('\t')
+#         if len(w) == 1 or re.search(ur"[0-9\uff10-\uff19]", w) is not None:
+#             continue
+#
+#         else:
+#             r_f.write(line)

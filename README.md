@@ -3,15 +3,20 @@ Nuance NLU online project
 ***
 Cookit is a web platform for Nuance NLU data management, online word segmentation and model validation. 
 
+
+## Environment
+python2.7 **x86**+django+mysql
+
 ## Db Init
 Create schema ‘cookit’ in mysql, then
 ```
 python manage.py makemigrations
 python manage.py migrate
 ```
+Your data models under `NLU/models.py` will be sync into db. 
 	
 ## Add a User Account
-Cookit requires user login to access NLU online part，so we need to create a account in backend.
+Cookit requires user login to access NLU online part，so we need to create an account in backend.
 ```
 python manage.py adduser
 ```

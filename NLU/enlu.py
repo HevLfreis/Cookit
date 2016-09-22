@@ -1,69 +1,76 @@
-#coding=utf-8
-from ctypes import *  
-  
-#define struct  
-class NLU_Input_C_TMP(Structure):  
-    _fields_ = [  
-        ("ctx_tag", c_char_p),  
-        ("tokens", c_char_p),   
-        ("topic_note", c_char_p)  
-               ]  
+# coding=utf-8
+from ctypes import *
+
+
+# define struct
+class NLU_Input_C_TMP(Structure):
+    _fields_ = [
+        ("ctx_tag", c_char_p),
+        ("tokens", c_char_p),
+        ("topic_note", c_char_p)
+    ]
+
     def __init__(self):
-        self.ctx_tag = cast(create_string_buffer(100),c_char_p) #create buffer, convert to char* type
+        self.ctx_tag = cast(create_string_buffer(100), c_char_p)  # create buffer, convert to char* type
         self.tokens_len = 10
-        self.tokens = cast(create_string_buffer(1000),c_char_p)
-        self.topic_note = cast(create_string_buffer(1000),c_char_p)
+        self.tokens = cast(create_string_buffer(1000), c_char_p)
+        self.topic_note = cast(create_string_buffer(1000), c_char_p)
 
 
-class NLU_Result_C_TMP(Structure):  
-    _fields_ = [  
-        ("domain_text", c_char_p),  
-        ("domain_score", c_double),  
-        ("slot_values", c_char_p),  
+class NLU_Result_C_TMP(Structure):
+    _fields_ = [
+        ("domain_text", c_char_p),
+        ("domain_score", c_double),
+        ("slot_values", c_char_p),
         ("slot_size", c_uint),
         ("pLen", POINTER(c_uint)),
         ("slot_score", c_double),
         ("utterance", c_char_p)
-               ]  
+    ]
+
     def __init__(self):
-        self.domain_text = cast(create_string_buffer(1000),c_char_p)
+        self.domain_text = cast(create_string_buffer(1000), c_char_p)
         self.domain_score = 0.0
-        self.slot_values = cast(create_string_buffer(1000),c_char_p)
+        self.slot_values = cast(create_string_buffer(1000), c_char_p)
         self.pLen = (c_uint * 50)()
         self.slot_size = 0
         self.slot_score = 0.0
-        self.utterance = cast(create_string_buffer(1000),c_char_p)
-        
+        self.utterance = cast(create_string_buffer(1000), c_char_p)
+
+
 def ENLU_init(dll, model_file, mode):
     init = dll.ENLU_Init
     init.argtypes = [c_char_p, c_uint]
     init.restype = c_uint
     mode = c_uint(1)
     pModel = c_char_p(model_file)
-    #pModel.value = model_file
+    # pModel.value = model_file
     init(pModel, mode)
+
 
 def ENLU_Uninit(dll):
     uninit = dll.ENLU_Uninit
     uninit.argtypes = None
-    uninit.restype=c_uint
+    uninit.restype = c_uint
     uninit()
+
 
 def ENLU_Segment(dll, inputStr):
     segmentation = dll.ENLU_WordSeg_PY
-    segmentation.argtypes = [c_char_p, c_char_p, c_int,POINTER(c_int)]
+    segmentation.argtypes = [c_char_p, c_char_p, c_int, POINTER(c_int)]
     segmentation.restype = c_uint
-    #pInputStr = c_char_p(inputStr)
-    #pOutputStr = c_char_p(outputStr)
-    #wordSize = 10
-    bufLen = len(inputStr)*3
-    outputStr = cast(create_string_buffer(bufLen),c_char_p)
+    # pInputStr = c_char_p(inputStr)
+    # pOutputStr = c_char_p(outputStr)
+    # wordSize = 10
+    bufLen = len(inputStr) * 3
+    outputStr = cast(create_string_buffer(bufLen), c_char_p)
     wordSize = c_int(0)
     segmentation(inputStr, outputStr, bufLen, byref(wordSize))
-    #print outputStr+";"
-    result = outputStr.value.replace('。','').replace('，','')
+    # print outputStr+";"
+    result = outputStr.value.replace('。', '').replace('，', '')
     wordStr = " ".join(result.split("|")).strip()
     return wordStr
+
 
 def ENLU_Classify(dll, inputStruct, outputStruct):
     classifyRes = ""
@@ -73,10 +80,11 @@ def ENLU_Classify(dll, inputStruct, outputStruct):
     classify(inputStruct, outputStruct)
     classifyRes += outputStruct.domain_text
     return classifyRes
-    
+
+
 def ENLU_Extract(dll, inputStruct, outputStruct):
     slotRes = {}
-    extract=dll.ENLU_ExtractWithoutClassify
+    extract = dll.ENLU_ExtractWithoutClassify
     extract.argtypes = [POINTER(NLU_Input_C_TMP), POINTER(NLU_Result_C_TMP)]
     extract.restype = c_uint
     extract(inputStruct, outputStruct)
@@ -96,8 +104,8 @@ def ENLU_Extract(dll, inputStruct, outputStruct):
             end = end + outputStruct.pLen[id]
 
     return slotRes
-    
-    
+
+
 def ENLU_batchProcess(dll, inputFile, outputFile):
     inputStream = open(inputFile, 'rb')
     outputFile = open(outputFile, 'wb')
@@ -107,7 +115,7 @@ def ENLU_batchProcess(dll, inputFile, outputFile):
         outputFile.write(sentence + "\t")
         inputStruct = NLU_Input_C_TMP()
         inputStruct.ctx_tag = "res_type_NCS"
-        inputStruct.tokens = sentence#c_char_p(sentence)
+        inputStruct.tokens = sentence  # c_char_p(sentence)
         outputStruct = NLU_Result_C_TMP()
         classifyRes = ENLU_Classify(dll, inputStruct, outputStruct)
         slotRes = ENLU_Extract(dll, inputStruct, outputStruct)
@@ -127,12 +135,12 @@ def ENLU_Process(dll, words):
     slotRes = ENLU_Extract(dll, inputStruct, outputStruct)
 
     return {'domain': classifyRes, 'slot': slotRes}
-    
-    
+
+
 def Word_segment_init(dll, model_file):
-    f=dll.word_segment_init
-    f.argtypes=[c_char_p]
-    f.restype=c_uint
+    f = dll.word_segment_init
+    f.argtypes = [c_char_p]
+    f.restype = c_uint
 
     pModel = c_char_p()
     pModel.value = model_file
@@ -140,19 +148,18 @@ def Word_segment_init(dll, model_file):
 
 
 def Word_segment_for_string(dll, data_in):
-    f=dll.word_segment_for_string
-    f.argtypes=[c_char_p]
+    f = dll.word_segment_for_string
+    f.argtypes = [c_char_p]
 
     pData_in = c_char_p()
     pData_in = data_in
-    pData_out = create_string_buffer('/0'*1024)
+    pData_out = create_string_buffer('/0' * 1024)
     f(pData_in, pData_out)
     # print pData_out.value.decode("utf-8")
     return pData_out.value
 
 
 def Word_segment_uninit(dll):
-    f=dll.word_segment_uninit
-    f.restype=c_uint
+    f = dll.word_segment_uninit
+    f.restype = c_uint
     print f()
-
